@@ -6,15 +6,6 @@ Welcome to my daily LeetCode problem-solving repository! Here, I document my jou
 
 This repository serves as a personal log of the LeetCode problems I solve. The main goal is to maintain a consistent practice schedule and to have a reference for the solutions I've developed. Each solution is implemented in JavaScript.
 
-## Progress Tracker
-
-Here is a summary of the problems I've solved so far:
-
-| Date       | Problem                                           | Solution & Explanation | Difficulty |
-| :--------- | :------------------------------------------------ | :--------------------- | :--------- |
-| 2024-05-23 | [Two Sum](https://leetcode.com/problems/two-sum/) | [Solution](./two-sum/) | Easy       |
-| ...        | ...                                               | ...                    | ...        |
-
 ## How to Use
 
 Each problem has its own directory, which contains the solution file (e.g., `two-sum.js`) and a `README.md` with a detailed explanation of the approach.
