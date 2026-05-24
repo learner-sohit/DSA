@@ -6,6 +6,10 @@ Welcome to my daily LeetCode problem-solving repository! Here, I document my jou
 
 This repository serves as a personal log of the LeetCode problems I solve. The main goal is to maintain a consistent practice schedule and to have a reference for the solutions I've developed. Each solution is implemented in JavaScript.
 
+**[View My LeetCode Profile](https://leetcode.com/u/sohitkumar9548/)**
+
+---
+
 ## How to Use
 
 Each problem has its own directory, which contains the solution file (e.g., `two-sum.js`) and a `README.md` with a detailed explanation of the approach.
