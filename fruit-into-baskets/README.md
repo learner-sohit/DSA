@@ -12,7 +12,7 @@ You want to collect as much fruit as possible, but the owner has some strict rul
 2.  Starting from any tree of your choice, you must pick **exactly one fruit** from every tree (including the start tree) while moving to the right. The picked fruits must fit in one of your two baskets.
 3.  Once you reach a tree with fruit that cannot fit in your baskets, you must stop.
 
-Given the integer array `fruits`, return *the **maximum** number of fruits you can pick*.
+Given the integer array `fruits`, return _the **maximum** number of fruits you can pick_.
 
 This problem is equivalent to finding the **longest subarray with at most two distinct elements**.
 
@@ -30,8 +30,8 @@ This method checks every possible subarray to find the longest one that contains
 4.  If the size of the `Set` is less than or equal to 2, the subarray is valid. Calculate its length (`j - i + 1`) and update `max` if it's the longest found so far.
 5.  If the `Set` size becomes greater than 2, it means we've encountered a third type of fruit, so we break the inner loop and move to the next starting position.
 
--   **Time Complexity:** O(n²)
--   **Space Complexity:** O(1) - The set will hold at most 3 elements.
+- **Time Complexity:** O(n²)
+- **Space Complexity:** O(1) - The set will hold at most 3 elements.
 
 ### Optimal Approach (Sliding Window)
 
@@ -41,11 +41,11 @@ This method uses a sliding window to find the longest subarray with at most two 
 2.  Use a `Map` to store the count of each fruit type within the current window.
 3.  Expand the window by moving the `right` pointer and update the count of `fruits[right]` in the map.
 4.  If the `map.size` becomes greater than 2, the window is invalid. We must shrink it from the left:
-    -   Decrement the count of the fruit at the `left` pointer.
-    -   If the count of that fruit becomes `0`, remove it from the map entirely.
-    -   Increment `left`.
+    - Decrement the count of the fruit at the `left` pointer.
+    - If the count of that fruit becomes `0`, remove it from the map entirely.
+    - Increment `left`.
 5.  After each adjustment, the window from `left` to `right` is valid. Calculate its length (`right - left + 1`) and update `maxlen`.
 6.  Continue until the `right` pointer reaches the end of the array.
 
--   **Time Complexity:** O(n)
--   **Space Complexity:** O(1) - The map will hold at most 3 distinct fruit types.
+- **Time Complexity:** O(n)
+- **Space Complexity:** O(1) - The map will hold at most 3 distinct fruit types.

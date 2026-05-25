@@ -3,29 +3,30 @@
  * @return {number}
  */
 
- ///////OPTIMAL APPROCAH///////////
-var totalFruit = function(fruits) {
-    let maxlen = 0,
-        left = 0,
-        right = 0;
-    const map = new Map();
-    
-    while(right < fruits.length) {
-        map.has(fruits[right]) ? map.set(fruits[right], map.get(fruits[right])+1) : map.set(fruits[right], 1);
+///////OPTIMAL APPROCAH///////////
+var totalFruit = function (fruits) {
+  let maxlen = 0,
+    left = 0,
+    right = 0;
+  const map = new Map();
 
-        if(map.size > 2) {
-            map.set(fruits[left],map.get(fruits[left])-1);
-            if(map.get(fruits[left]) === 0) map.delete(fruits[left]);
-            left++;
-        }
-        maxlen = Math.max(maxlen, right-left+1);
-        right++;
+  while (right < fruits.length) {
+    map.has(fruits[right])
+      ? map.set(fruits[right], map.get(fruits[right]) + 1)
+      : map.set(fruits[right], 1);
+
+    if (map.size > 2) {
+      map.set(fruits[left], map.get(fruits[left]) - 1);
+      if (map.get(fruits[left]) === 0) map.delete(fruits[left]);
+      left++;
     }
-    return maxlen;
+    maxlen = Math.max(maxlen, right - left + 1);
+    right++;
+  }
+  return maxlen;
+};
 
- };
-
- /*
+/*
 
  ///////Brute force solution/////
 var totalFruit_bruteForce = function(fruits) {
