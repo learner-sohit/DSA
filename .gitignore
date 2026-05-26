@@ -24,3 +24,6 @@ yarn-error.log*
 # IDE / Editor specific
 .vscode/
 .idea/
+
+# Test files
+test.js
