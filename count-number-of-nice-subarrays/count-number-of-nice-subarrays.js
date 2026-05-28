@@ -4,27 +4,27 @@
  * @return {number}
  */
 //////optimal solution////////
-var numberOfSubarrays = function(nums, k) {
-    return  countSubArray(nums, k) - countSubArray(nums, k-1);
+var numberOfSubarrays = function (nums, k) {
+  return countSubArray(nums, k) - countSubArray(nums, k - 1);
 };
 
 function countSubArray(nums, k) {
-    if (k < 0) return 0;
-    let left = 0;
-    let right = 0;
-    let count = 0;
-    let oddCount = 0;
+  if (k < 0) return 0;
+  let left = 0;
+  let right = 0;
+  let count = 0;
+  let oddCount = 0;
 
-    while(right < nums.length) {
-        if(nums[right] % 2 !== 0) oddCount++;
-        while(oddCount > k) {
-            if(nums[left] % 2 !== 0) oddCount--;
-            left++;
-        }
-        count += right-left + 1;
-        right++;
+  while (right < nums.length) {
+    if (nums[right] % 2 !== 0) oddCount++;
+    while (oddCount > k) {
+      if (nums[left] % 2 !== 0) oddCount--;
+      left++;
     }
-    return count;
+    count += right - left + 1;
+    right++;
+  }
+  return count;
 }
 
 /*
