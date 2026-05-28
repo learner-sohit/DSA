@@ -29,16 +29,19 @@ This method checks every possible substring to see if it contains all three char
 - **Time Complexity:** O(n²)
 - **Space Complexity:** O(1) - The set will hold at most 3 characters.
 
-### Optimal Approach (Sliding Window)
+### Optimal Approach (Sliding Window with Last Seen Indices)
 
-A more efficient approach uses a sliding window. The key insight is that once we find a valid window (a substring from `left` to `right` that contains 'a', 'b', and 'c'), we know that any substring that _starts_ at `left` and _ends_ at or after `right` will also be valid.
+A highly efficient approach uses a single pass through the string, keeping track of the last seen index of each character ('a', 'b', 'c').
 
-1.  Initialize `left` and `right` pointers, and a `count` for the result. Use a map or an array to track the last seen index of 'a', 'b', and 'c'.
-2.  Expand the window by moving the `right` pointer.
-3.  When the window from `left` to `right` contains all three characters:
-    - We have found a valid substring. The number of valid substrings that _end_ at or after `right` but _start_ at `left` is `s.length - right`. Add this to the total `count`.
-    - Now, we can shrink the window from the `left` by incrementing the `left` pointer. This is because we've already counted all valid substrings starting at the old `left` position.
-4.  Continue this process until `right` reaches the end of the string.
+The core idea is that for any character at index `i`, if we have seen all three characters, we can form new valid substrings. A substring is valid if it contains at least one 'a', 'b', and 'c'.
 
-- **Time Complexity:** O(n)
-- **Space Complexity:** O(1)
+1.  Initialize an array `lastSeen` to `[-1, -1, -1]` to store the last index where 'a', 'b', and 'c' were found.
+2.  Initialize `count` to `0`.
+3.  Iterate through the string with a single pointer `i`.
+4.  In each iteration, update the `lastSeen` index for the character `s[i]`.
+5.  After updating, check if all three characters have been seen (i.e., none of the values in `lastSeen` are -1).
+6.  If they have, it means we can form new valid substrings. The number of valid substrings that **end** at the current index `i` is determined by the earliest-seen character among the three. If the minimum index in `lastSeen` is, for example, `min_index`, then any substring starting from index `0` up to `min_index` and ending at `i` will be valid. The number of such substrings is `1 + min_index`. We add this to our total `count`.
+7.  Continue until the loop finishes, and `count` will hold the total number of valid substrings.
+
+-   **Time Complexity:** O(n) - We iterate through the string only once.
+-   **Space Complexity:** O(1) - The `lastSeen` array is of constant size.
