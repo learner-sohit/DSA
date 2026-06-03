@@ -43,5 +43,5 @@ The core idea is that for any character at index `i`, if we have seen all three 
 6.  If they have, it means we can form new valid substrings. The number of valid substrings that **end** at the current index `i` is determined by the earliest-seen character among the three. If the minimum index in `lastSeen` is, for example, `min_index`, then any substring starting from index `0` up to `min_index` and ending at `i` will be valid. The number of such substrings is `1 + min_index`. We add this to our total `count`.
 7.  Continue until the loop finishes, and `count` will hold the total number of valid substrings.
 
--   **Time Complexity:** O(n) - We iterate through the string only once.
--   **Space Complexity:** O(1) - The `lastSeen` array is of constant size.
+- **Time Complexity:** O(n) - We iterate through the string only once.
+- **Space Complexity:** O(1) - The `lastSeen` array is of constant size.
