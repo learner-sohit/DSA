@@ -28,6 +28,7 @@ Here is a summary of the problems I've solved so far:
 | 1358. Number of Substrings Containing All Three Characters | [Solution](./number-of-substrings-containing-all-three-characters) | Medium     |
 | 144. Binary Tree Preorder Traversal                        | [Solution](./binary-tree-preorder-traversal)                       | Easy       |
 | 94. Binary Tree Inorder Traversal                          | [Solution](./binary-tree-inorder-traversal)                        | Easy       |
+| 145. Binary Tree Postorder Traversal                       | [Solution](./binary-tree-postorder-traversal)                      | Easy       |
 
 ## How to Use
 
