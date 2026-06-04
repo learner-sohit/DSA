@@ -29,6 +29,7 @@ Here is a summary of the problems I've solved so far:
 | 144. Binary Tree Preorder Traversal                        | [Solution](./binary-tree-preorder-traversal)                       | Easy       |
 | 94. Binary Tree Inorder Traversal                          | [Solution](./binary-tree-inorder-traversal)                        | Easy       |
 | 145. Binary Tree Postorder Traversal                       | [Solution](./binary-tree-postorder-traversal)                      | Easy       |
+| 102. Binary Tree Level Order Traversal                     | [Solution](./binary-tree-level-order-traversal)                    | Medium     |
 
 ## How to Use
 
