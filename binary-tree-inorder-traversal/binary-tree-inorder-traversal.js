@@ -10,7 +10,30 @@
  * @param {TreeNode} root
  * @return {number[]}
  */
+////////////Iterative solution//////////////
 var inorderTraversal = function (root) {
+  if (!root) return [];
+
+  const result = [];
+  const stack = [];
+  let curr = root;
+
+  while (curr || stack.length) {
+    while (curr) {
+      stack.push(curr);
+      curr = curr.left;
+    }
+
+    curr = stack.pop();
+    result.push(curr.val);
+
+    curr = curr.right;
+  }
+  return result;
+};
+
+////////////Recursive solution//////////////
+var inorderTraversal_recursive = function (root) {
   const result = [];
   inOrder(root, result);
   return result;
