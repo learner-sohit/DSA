@@ -4,7 +4,7 @@ Welcome to my daily LeetCode problem-solving repository! Here, I document my jou
 
 ## Introduction
 
-This repository serves as a personal log of the LeetCode problems I solve. The main goal is to maintain a consistent practice schedule and to have a reference for the solutions I've developed. Each solution is implemented in JavaScript.
+This repository serves as a personal log of the LeetCode problems I solve. The main goal is to maintain a consistent practice schedule and to have a reference for the solutions I've developed. Solutions are organized by problem and may be implemented in JavaScript or Java.
 
 **[View My LeetCode Profile](https://leetcode.com/u/sohitkumar9548/)**
 
@@ -30,10 +30,11 @@ Here is a summary of the problems I've solved so far:
 | 94. Binary Tree Inorder Traversal                          | [Solution](./binary-tree-inorder-traversal)                        | Easy       |
 | 145. Binary Tree Postorder Traversal                       | [Solution](./binary-tree-postorder-traversal)                      | Easy       |
 | 102. Binary Tree Level Order Traversal                     | [Solution](./binary-tree-level-order-traversal)                    | Medium     |
+| 104. Maximum Depth of Binary Tree                          | [Solution](./maximum-depth-of-binary-tree)                         | Easy       |
 
 ## How to Use
 
-Each problem has its own directory, which contains the solution file (e.g., `two-sum.js`) and a `README.md` with a detailed explanation of the approach.
+Each problem has its own directory, which contains one or more language-specific solution files and a `README.md` with a detailed explanation of the approach.
 
 You can browse the solutions by navigating to the respective problem directories. To run a solution, you can use Node.js from within the problem's directory:
 
