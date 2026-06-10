@@ -32,6 +32,7 @@ Here is a summary of the problems I've solved so far:
 | 102. Binary Tree Level Order Traversal                     | [Solution](./binary-tree-level-order-traversal)                    | Medium     |
 | 104. Maximum Depth of Binary Tree                          | [Solution](./maximum-depth-of-binary-tree)                         | Easy       |
 | 110. Balanced Binary Tree                                 | [Solution](./balanced-binary-tree)                                | Easy       |
+| 543. Diameter of Binary Tree                               | [Solution](./diameter-of-binary-tree)                              | Easy       |
 
 ## How to Use
 
