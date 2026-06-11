@@ -33,6 +33,7 @@ Here is a summary of the problems I've solved so far:
 | 104. Maximum Depth of Binary Tree                          | [Solution](./maximum-depth-of-binary-tree)                         | Easy       |
 | 110. Balanced Binary Tree                                 | [Solution](./balanced-binary-tree)                                | Easy       |
 | 543. Diameter of Binary Tree                               | [Solution](./diameter-of-binary-tree)                              | Easy       |
+| 124. Binary Tree Maximum Path Sum                          | [Solution](./binary-tree-maximum-path-sum)                         | Hard       |
 
 ## How to Use
 
