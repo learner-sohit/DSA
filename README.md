@@ -18,6 +18,7 @@ Here is a summary of the problems I've solved so far:
 | :--------------------------------------------------------- | :----------------------------------------------------------------- | :--------- |
 | [Two Sum](https://leetcode.com/problems/two-sum/)          | [Solution](./two-sum/)                                             | Easy       |
 | 485. Max Consecutive Ones                                  | [Solution](./max-consecutive-ones)                                 | Easy       |
+| 509. Fibonacci Number                                      | [Solution](./fibonacci-number)                                     | Easy       |
 | 1423. Maximum Points You Can Obtain from Cards             | [Solution](./maximum-points-you-can-obtain-from-cards)             | Medium     |
 | 3. Longest Substring Without Repeating Characters          | [Solution](./longest-substring-without-repeating-characters)       | Medium     |
 | 1004. Max Consecutive Ones III                             | [Solution](./max-consecutive-ones-iii)                             | Medium     |
