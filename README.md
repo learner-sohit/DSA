@@ -32,6 +32,7 @@ Here is a summary of the problems I've solved so far:
 | 145. Binary Tree Postorder Traversal                       | [Solution](./binary-tree-postorder-traversal)                      | Easy       |
 | 102. Binary Tree Level Order Traversal                     | [Solution](./binary-tree-level-order-traversal)                    | Medium     |
 | 103. Binary Tree Zigzag Level Order Traversal              | [Solution](./binary-tree-zigzag-level-order-traversal)             | Medium     |
+| 987. Vertical Order Traversal of a Binary Tree             | [Solution](./vertical-order-traversal-of-a-binary-tree)            | Hard       |
 | 104. Maximum Depth of Binary Tree                          | [Solution](./maximum-depth-of-binary-tree)                         | Easy       |
 | 100. Same Tree                                             | [Solution](./same-tree)                                            | Easy       |
 | 110. Balanced Binary Tree                                 | [Solution](./balanced-binary-tree)                                | Easy       |
