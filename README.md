@@ -37,6 +37,7 @@ Here is a summary of the problems I've solved so far:
 | 100. Same Tree                                             | [Solution](./same-tree)                                            | Easy       |
 | 110. Balanced Binary Tree                                 | [Solution](./balanced-binary-tree)                                | Easy       |
 | 543. Diameter of Binary Tree                               | [Solution](./diameter-of-binary-tree)                              | Easy       |
+| 545. Boundary of Binary Tree                               | [Solution](./boundary-of-binary-tree)                              | Medium     |
 | 124. Binary Tree Maximum Path Sum                          | [Solution](./binary-tree-maximum-path-sum)                         | Hard       |
 
 ## How to Use
