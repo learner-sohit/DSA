@@ -35,6 +35,7 @@ Here is a summary of the problems I've solved so far:
 | 987. Vertical Order Traversal of a Binary Tree             | [Solution](./vertical-order-traversal-of-a-binary-tree)            | Hard       |
 | 104. Maximum Depth of Binary Tree                          | [Solution](./maximum-depth-of-binary-tree)                         | Easy       |
 | 100. Same Tree                                             | [Solution](./same-tree)                                            | Easy       |
+| 101. Symmetric Tree                                        | [Solution](./symmetric-tree)                                       | Easy       |
 | 110. Balanced Binary Tree                                 | [Solution](./balanced-binary-tree)                                | Easy       |
 | 543. Diameter of Binary Tree                               | [Solution](./diameter-of-binary-tree)                              | Easy       |
 | 545. Boundary of Binary Tree                               | [Solution](./boundary-of-binary-tree)                              | Medium     |
