@@ -39,6 +39,7 @@ Here is a summary of the problems I've solved so far:
 | 104. Maximum Depth of Binary Tree                          | [Solution](./maximum-depth-of-binary-tree)                         | Easy       |
 | 100. Same Tree                                             | [Solution](./same-tree)                                            | Easy       |
 | 101. Symmetric Tree                                        | [Solution](./symmetric-tree)                                       | Easy       |
+| 700. Search in a Binary Search Tree                        | [Solution](./search-in-a-binary-search-tree)                       | Easy       |
 | 110. Balanced Binary Tree                                 | [Solution](./balanced-binary-tree)                                | Easy       |
 | 543. Diameter of Binary Tree                               | [Solution](./diameter-of-binary-tree)                              | Easy       |
 | 545. Boundary of Binary Tree                               | [Solution](./boundary-of-binary-tree)                              | Medium     |
