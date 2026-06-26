@@ -1,10 +1,12 @@
-# LeetCode Daily Challenges
+# DSA Practice in Java
 
-Welcome to my daily LeetCode problem-solving repository! Here, I document my journey of tackling various LeetCode problems to enhance my problem-solving skills and understanding of data structures and algorithms.
+Welcome to my DSA problem-solving repository! Here, I document my journey of solving problems from LeetCode and GeeksforGeeks to improve my problem-solving skills and understanding of data structures and algorithms.
 
 ## Introduction
 
-This repository serves as a personal log of the LeetCode problems I solve. The main goal is to maintain a consistent practice schedule and to have a reference for the solutions I've developed. Solutions are organized by problem and may be implemented in JavaScript or Java.
+This repository serves as a personal log of the DSA problems I solve. The main goal is to maintain a consistent practice schedule and to have a reference for the solutions I've developed.
+
+I am currently solving problems mainly in Java. Some older solutions are still available in JavaScript, and newer folders may include Java files based on the platform or problem format.
 
 **[View My LeetCode Profile](https://leetcode.com/u/sohitkumar9548/)**
 
@@ -51,7 +53,19 @@ Here is a summary of the problems I've solved so far:
 
 Each problem has its own directory, which contains one or more language-specific solution files and a `README.md` with a detailed explanation of the approach.
 
-You can browse the solutions by navigating to the respective problem directories. To run a solution, you can use Node.js from within the problem's directory:
+You can browse the solutions by navigating to the respective problem directories.
+
+For Java solutions, compile and run the file with `javac` and `java` when the problem includes a local `main` method or test harness:
+
+```bash
+cd <problem-name>
+javac <problem-name>.java
+java Solution
+```
+
+Many platform-style Java solutions rely on judge-provided classes such as `TreeNode` or `Node`, so they are meant to be submitted directly to LeetCode or GeeksforGeeks.
+
+For older JavaScript solutions, you can still use Node.js:
 
 ```bash
 cd <problem-name>
