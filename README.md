@@ -43,6 +43,7 @@ Here is a summary of the problems I've solved so far:
 | 101. Symmetric Tree                                        | [Solution](./symmetric-tree)                                       | Easy       |
 | 700. Search in a Binary Search Tree                        | [Solution](./search-in-a-binary-search-tree)                       | Easy       |
 | 701. Insert into a Binary Search Tree                       | [Solution](./insert-into-a-binary-search-tree)                     | Medium     |
+| 450. Delete Node in a BST                                  | [Solution](./delete-node-in-a-bst)                                 | Medium     |
 | Floor in BST                                               | [Solution](./floor-in-bst)                                         | Easy       |
 | Ceil in BST                                                | [Solution](./ceil-in-bst)                                          | Easy       |
 | 110. Balanced Binary Tree                                 | [Solution](./balanced-binary-tree)                                | Easy       |
