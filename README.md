@@ -51,6 +51,7 @@ Here is a summary of the problems I've solved so far:
 | 543. Diameter of Binary Tree                               | [Solution](./diameter-of-binary-tree)                              | Easy       |
 | 545. Boundary of Binary Tree                               | [Solution](./boundary-of-binary-tree)                              | Medium     |
 | 124. Binary Tree Maximum Path Sum                          | [Solution](./binary-tree-maximum-path-sum)                         | Hard       |
+| 98. Validate Binary Search Tree                            | [Solution](./validate-binary-search-tree)                          | Medium     |
 
 ## How to Use
 
