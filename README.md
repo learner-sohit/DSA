@@ -53,6 +53,7 @@ Here is a summary of the problems I've solved so far:
 | 124. Binary Tree Maximum Path Sum                          | [Solution](./binary-tree-maximum-path-sum)                         | Hard       |
 | 98. Validate Binary Search Tree                            | [Solution](./validate-binary-search-tree)                          | Medium     |
 | 235. Lowest Common Ancestor of a Binary Search Tree        | [Solution](./lowest-common-ancestor-of-a-binary-search-tree)       | Medium     |
+| 1008. Construct Binary Search Tree from Preorder Traversal | [Solution](./construct-binary-search-tree-from-preorder-traversal) | Medium     |
 
 ## How to Use
 
