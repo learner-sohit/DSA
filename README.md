@@ -54,6 +54,7 @@ Here is a summary of the problems I've solved so far:
 | 98. Validate Binary Search Tree                            | [Solution](./validate-binary-search-tree)                          | Medium     |
 | 235. Lowest Common Ancestor of a Binary Search Tree        | [Solution](./lowest-common-ancestor-of-a-binary-search-tree)       | Medium     |
 | 1008. Construct Binary Search Tree from Preorder Traversal | [Solution](./construct-binary-search-tree-from-preorder-traversal) | Medium     |
+| 173. Binary Search Tree Iterator                           | [Solution](./binary-search-tree-iterator)                          | Medium     |
 
 ## How to Use
 
