@@ -14,7 +14,47 @@
  * }
  */
 
-// ===== Approach 1: Inorder + Sort + Reassign =====
+// ===== Approach 2: Optimal — Single Inorder Pass (prev/first/middle/last pointers) =====
+// Time Complexity: O(n) | Space Complexity: O(h) — h = height of tree (call stack)
+class Solution {
+    private TreeNode prev, middle, first, last;
+
+    private void inorder(TreeNode root) {
+        if (root == null) return;
+
+        inorder(root.left);
+        if (prev.val > root.val) {
+            if (first == null) {
+                first = prev;
+                middle = root;
+            } else {
+                last = root;
+            }
+        }
+        prev = root;
+        inorder(root.right);
+    }
+
+    public void recoverTree(TreeNode root) {
+        first = last = middle = null;
+        prev = new TreeNode(Integer.MIN_VALUE);
+
+        inorder(root);
+
+        if (first != null && last != null) {
+            int temp = first.val;
+            first.val = last.val;
+            last.val = temp;
+        } else if (first != null && middle != null) {
+            int temp = first.val;
+            first.val = middle.val;
+            middle.val = temp;
+        }
+    }
+}
+
+/*
+// ===== Approach 1: Brute Force — Inorder + Sort + Reassign =====
 // Time Complexity: O(n log n) | Space Complexity: O(n)
 class Solution {
     int idx = 0;
@@ -47,3 +87,4 @@ class Solution {
         findInorder(root.right, list);
     }
 }
+*/
