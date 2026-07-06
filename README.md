@@ -64,6 +64,7 @@ Here is a summary of the problems I've solved so far:
 | 678. Valid Parenthesis String                              | [Solution](./valid-parenthesis-string)                             | Medium     |
 | N Meetings in One Room                                     | [Solution](./n-meetings-in-one-room)                               | Easy       |
 | 55. Jump Game                                              | [Solution](./jump-game)                                            | Medium     |
+| 45. Jump Game II                                           | [Solution](./jump-game-ii)                                         | Medium     |
 
 ## How to Use
 
