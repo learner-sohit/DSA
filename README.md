@@ -63,6 +63,7 @@ Here is a summary of the problems I've solved so far:
 | 860. Lemonade Change                                       | [Solution](./lemonade-change)                                      | Easy       |
 | 678. Valid Parenthesis String                              | [Solution](./valid-parenthesis-string)                             | Medium     |
 | N Meetings in One Room                                     | [Solution](./n-meetings-in-one-room)                               | Easy       |
+| 55. Jump Game                                              | [Solution](./jump-game)                                            | Medium     |
 
 ## How to Use
 
