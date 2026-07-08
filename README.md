@@ -66,6 +66,7 @@ Here is a summary of the problems I've solved so far:
 | 55. Jump Game                                              | [Solution](./jump-game)                                            | Medium     |
 | 45. Jump Game II                                           | [Solution](./jump-game-ii)                                         | Medium     |
 | Minimum Number of Platforms                                | [Solution](./minimum-number-of-platforms)                          | Medium     |
+| Job Sequencing Problem                                     | [Solution](./job-sequencing-problem)                               | Medium     |
 
 ## How to Use
 
