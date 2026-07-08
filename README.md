@@ -67,6 +67,7 @@ Here is a summary of the problems I've solved so far:
 | 45. Jump Game II                                           | [Solution](./jump-game-ii)                                         | Medium     |
 | Minimum Number of Platforms                                | [Solution](./minimum-number-of-platforms)                          | Medium     |
 | Job Sequencing Problem                                     | [Solution](./job-sequencing-problem)                               | Medium     |
+| 135. Candy                                                 | [Solution](./candy)                                                | Hard       |
 
 ## How to Use
 
