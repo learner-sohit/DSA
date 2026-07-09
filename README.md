@@ -69,6 +69,7 @@ Here is a summary of the problems I've solved so far:
 | Job Sequencing Problem                                     | [Solution](./job-sequencing-problem)                               | Medium     |
 | 135. Candy                                                 | [Solution](./candy)                                                | Hard       |
 | Implement Min Heap                                         | [Solution](./implement-min-heap)                                   | Easy       |
+| Check if an Array Represents a Max Heap                    | [Solution](./check-if-array-represents-max-heap)                   | Easy       |
 
 ## How to Use
 
