@@ -68,6 +68,7 @@ Here is a summary of the problems I've solved so far:
 | Minimum Number of Platforms                                | [Solution](./minimum-number-of-platforms)                          | Medium     |
 | Job Sequencing Problem                                     | [Solution](./job-sequencing-problem)                               | Medium     |
 | 135. Candy                                                 | [Solution](./candy)                                                | Hard       |
+| Implement Min Heap                                         | [Solution](./implement-min-heap)                                   | Easy       |
 
 ## How to Use
 
