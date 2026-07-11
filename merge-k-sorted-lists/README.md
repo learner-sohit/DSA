@@ -40,27 +40,33 @@ You are given an array of `k` linked lists `lists`, each linked list is sorted i
 
 ---
 
-### Approach 2: Better — Sequential Merge One List at a Time (Active)
+### Approach 3: Optimal — Min Heap (Priority Queue) (Active)
+
+**Idea:**  
+Use a Min Heap to always efficiently extract the globally smallest node across all `k` list heads. Seed the heap with the head of each non-null list. At each step, poll the minimum node, append it to the result, and push its successor (if any) back into the heap.
+
+**Algorithm:**
+1. Add the head of each non-null list to a `PriorityQueue` ordered by `val`.
+2. While the heap is non-empty:
+   - Poll the minimum node `temp`.
+   - If `temp.next != null`, push `temp.next` into the heap.
+   - Append `temp` to the result list.
+3. Return `dummy.next`.
+
+**Complexity:**
+- **Time:** O(N log k) — N = total nodes, each node is pushed/popped once at O(log k) cost.
+- **Space:** O(k) — at most `k` nodes in the heap at any time.
+
+---
+
+### Approach 2: Better — Sequential Merge (Merge One List at a Time)
 
 **Idea:**  
 Iteratively merge each list in `lists` into a running `head` using a standard two-list merge. Start with `head = null` and merge each list one by one. Each call to `mergeTwoLists` takes two sorted lists and produces one sorted result using a dummy node and two pointers.
 
-**`mergeTwoLists` Algorithm:**
-1. Use a `dummy` node and a `curr` pointer.
-2. While both lists are non-null: pick the smaller node, advance that pointer and `curr`.
-3. Attach any remaining nodes from the non-exhausted list.
-4. Return `dummy.next`.
-
-**`mergeKLists` Algorithm:**
-1. Initialize `head = null`.
-2. For each list in `lists`: `head = mergeTwoLists(head, lists[i])`.
-3. Return `head`.
-
 **Complexity:**
-- **Time:** O(k × n) — where `k` = number of lists, `n` = average list length. Each merge pass touches all previously merged nodes again.
-- **Space:** O(1) — merging in-place with pointer manipulation (no extra nodes created).
-
-> **Note:** A more optimal approach uses a **Min Heap (Priority Queue)** to always extract the globally smallest node across all lists in O(log k) time, giving O(N log k) total where N = total nodes. This is the optimal solution for large `k`.
+- **Time:** O(k × n) — where `k` = number of lists, `n` = average list length. Each merge pass re-traverses all previously merged nodes.
+- **Space:** O(1) — merging in-place with pointer manipulation.
 
 ---
 
@@ -78,3 +84,4 @@ Traverse all `k` lists and collect every node value into an `ArrayList`. Sort th
 **Complexity:**
 - **Time:** O(N log N) — where N = total number of nodes across all lists.
 - **Space:** O(N) — `ArrayList` stores all values + new nodes created for the result list.
+

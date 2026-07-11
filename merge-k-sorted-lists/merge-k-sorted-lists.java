@@ -9,6 +9,32 @@
  * }
  */
 
+// ===== Approach 3: Optimal — Min Heap (Priority Queue) =====
+// Time Complexity: O(N log k) | Space Complexity: O(k) — k = number of lists, N = total nodes
+class Solution {
+    public ListNode mergeKLists(ListNode[] lists) {
+        // Min Heap ordered by node value
+        PriorityQueue<ListNode> pq = new PriorityQueue<>((a, b) -> a.val - b.val);
+
+        // Seed the heap with the head of each non-null list
+        for (int i = 0; i < lists.length; i++) {
+            if (lists[i] != null) pq.offer(lists[i]);
+        }
+
+        ListNode dummy = new ListNode(-1);
+        ListNode curr = dummy;
+
+        while (!pq.isEmpty()) {
+            ListNode temp = pq.poll(); // Extract the globally smallest node
+            if (temp.next != null) pq.offer(temp.next); // Push its successor
+            curr.next = temp;
+            curr = curr.next;
+        }
+        return dummy.next;
+    }
+}
+
+/*
 // ===== Approach 2: Better — Sequential Merge (Merge one list at a time) =====
 // Time Complexity: O(k * n) | Space Complexity: O(1) — k = number of lists, n = avg list length
 class Solution {
@@ -53,6 +79,7 @@ class Solution {
         return dummy.next;
     }
 }
+*/
 
 /*
 // ===== Approach 1: Brute Force — Collect all values, sort, rebuild =====
