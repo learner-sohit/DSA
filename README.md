@@ -70,6 +70,7 @@ Here is a summary of the problems I've solved so far:
 | 135. Candy                                                 | [Solution](./candy)                                                | Hard       |
 | Implement Min Heap                                         | [Solution](./implement-min-heap)                                   | Easy       |
 | Check if an Array Represents a Max Heap                    | [Solution](./check-if-array-represents-max-heap)                   | Easy       |
+| 23. Merge K Sorted Lists                                   | [Solution](./merge-k-sorted-lists)                                 | Hard       |
 
 ## How to Use
 
