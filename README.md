@@ -73,6 +73,7 @@ Here is a summary of the problems I've solved so far:
 | 23. Merge K Sorted Lists                                   | [Solution](./merge-k-sorted-lists)                                 | Hard       |
 | 1331. Rank Transform of an Array                           | [Solution](./rank-transform-of-an-array)                           | Easy       |
 | 21. Merge Two Sorted Lists                                 | [Solution](./merge-two-sorted-lists)                               | Easy       |
+| 621. Task Scheduler                                        | [Solution](./task-scheduler)                                       | Medium     |
 
 ## How to Use
 
