@@ -74,6 +74,7 @@ Here is a summary of the problems I've solved so far:
 | 1331. Rank Transform of an Array                           | [Solution](./rank-transform-of-an-array)                           | Easy       |
 | 21. Merge Two Sorted Lists                                 | [Solution](./merge-two-sorted-lists)                               | Easy       |
 | 621. Task Scheduler                                        | [Solution](./task-scheduler)                                       | Medium     |
+| 846. Hand of Straights                                     | [Solution](./hand-of-straights)                                    | Medium     |
 
 ## How to Use
 
