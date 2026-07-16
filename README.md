@@ -76,6 +76,7 @@ Here is a summary of the problems I've solved so far:
 | 621. Task Scheduler                                        | [Solution](./task-scheduler)                                       | Medium     |
 | 846. Hand of Straights                                     | [Solution](./hand-of-straights)                                    | Medium     |
 | BFS of Graph                                               | [Solution](./bfs-of-graph)                                         | Easy       |
+| DFS of Graph                                               | [Solution](./dfs-of-graph)                                         | Easy       |
 
 ## How to Use
 
