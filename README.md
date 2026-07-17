@@ -80,6 +80,7 @@ Here is a summary of the problems I've solved so far:
 | 547. Number of Provinces                                   | [Solution](./number-of-provinces)                                  | Medium     |
 | Connected Components in an Undirected Graph                | [Solution](./connected-components-in-an-undirected-graph)          | Medium     |
 | 2685. Count the Number of Complete Components              | [Solution](./count-the-number-of-complete-components)              | Medium     |
+| 994. Rotting Oranges                                       | [Solution](./rotting-oranges)                                      | Medium     |
 
 ## How to Use
 
