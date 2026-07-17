@@ -78,6 +78,7 @@ Here is a summary of the problems I've solved so far:
 | BFS of Graph                                               | [Solution](./bfs-of-graph)                                         | Easy       |
 | DFS of Graph                                               | [Solution](./dfs-of-graph)                                         | Easy       |
 | 547. Number of Provinces                                   | [Solution](./number-of-provinces)                                  | Medium     |
+| Connected Components in an Undirected Graph                | [Solution](./connected-components-in-an-undirected-graph)          | Medium     |
 
 ## How to Use
 
