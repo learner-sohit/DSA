@@ -82,6 +82,7 @@ Here is a summary of the problems I've solved so far:
 | 2685. Count the Number of Complete Components              | [Solution](./count-the-number-of-complete-components)              | Medium     |
 | 994. Rotting Oranges                                       | [Solution](./rotting-oranges)                                      | Medium     |
 | 733. Flood Fill                                            | [Solution](./flood-fill)                                           | Easy       |
+| Detect Cycle in an Undirected Graph                        | [Solution](./detect-cycle-in-an-undirected-graph)                  | Medium     |
 
 ## How to Use
 
