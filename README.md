@@ -84,6 +84,7 @@ Here is a summary of the problems I've solved so far:
 | 733. Flood Fill                                            | [Solution](./flood-fill)                                           | Easy       |
 | Detect Cycle in an Undirected Graph                        | [Solution](./detect-cycle-in-an-undirected-graph)                  | Medium     |
 | 542. 01 Matrix                                             | [Solution](./01-matrix)                                            | Medium     |
+| 130. Surrounded Regions                                    | [Solution](./surrounded-regions)                                   | Medium     |
 
 ## How to Use
 
