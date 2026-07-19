@@ -83,6 +83,7 @@ Here is a summary of the problems I've solved so far:
 | 994. Rotting Oranges                                       | [Solution](./rotting-oranges)                                      | Medium     |
 | 733. Flood Fill                                            | [Solution](./flood-fill)                                           | Easy       |
 | Detect Cycle in an Undirected Graph                        | [Solution](./detect-cycle-in-an-undirected-graph)                  | Medium     |
+| 542. 01 Matrix                                             | [Solution](./01-matrix)                                            | Medium     |
 
 ## How to Use
 
