@@ -21,25 +21,9 @@ graph = [[1,2,3],[0,2],[0,1,3],[0,2]]
 
 ---
 
-## Approach: BFS 2-Coloring
+## Approach 1: BFS 2-Coloring
 
-A graph is bipartite **if and only if** it can be colored using exactly 2 colors such that no two adjacent nodes share the same color. We verify this using BFS:
-
-- Assign the starting node color `0`.
-- For each neighbor, assign the opposite color (`1 - color`).
-- If a neighbor is already colored with the **same color** as the current node → contradiction → **not bipartite**.
-
-The outer `for` loop ensures disconnected components are also checked.
-
-### Algorithm
-
-1. Initialize a `color` array of size `V` with `-1` (uncolored).
-2. For each uncolored node `i`:
-   - Assign color `0`, enqueue it.
-   - BFS: for each dequeued node, scan its neighbors:
-     - Uncolored → assign opposite color, enqueue.
-     - Same color as current node → return `false`.
-3. If no contradiction found → return `true`.
+Try to color the graph with 2 colors so no two adjacent nodes share the same color. Assign color `0` to the source and use BFS to assign the opposite color (`1 - color`) to every neighbor. If a neighbor already has the **same color** as the current node → contradiction → not bipartite.
 
 ### Complexity
 
@@ -47,3 +31,25 @@ The outer `for` loop ensures disconnected components are also checked.
 |---|---|
 | **Time** | O(V + E) — each node and edge is processed once |
 | **Space** | O(V) — color array + BFS queue |
+
+---
+
+## Approach 2: DFS 2-Coloring
+
+Same 2-coloring logic as BFS, but using **recursive DFS**. Assign color `0` to the source, then recursively assign the opposite color to each uncolored neighbor. If a colored neighbor matches the current node's color → return `false` immediately.
+
+### Algorithm
+
+1. Initialize `color` array with `-1` (uncolored).
+2. For each uncolored node `i`, assign color `0` and call `dfs(i, ...)`.
+3. In DFS: for each neighbor `adjNode`:
+   - Uncolored → assign opposite color, recurse; propagate `false` if returned.
+   - Same color as current node → return `false`.
+4. If no contradiction found → return `true`.
+
+### Complexity
+
+| | Complexity |
+|---|---|
+| **Time** | O(V + E) — each node and edge is processed once |
+| **Space** | O(V) — color array + recursion call stack |

@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -15,22 +16,21 @@ import java.util.Queue;
 class Solution {
 
     // -------------------------------------------------------------------------
-    // Approach: BFS 2-Coloring
+    // Approach 1: BFS 2-Coloring
     // -------------------------------------------------------------------------
     // Try to color the graph using 2 colors such that no two adjacent nodes
-    // share the same color. Start each uncolored node with color 0 and assign
-    // the opposite color (1 - color) to every neighbor via BFS.
-    // If a neighbor already has the same color as the current node → not bipartite.
-    // The outer loop handles disconnected graphs.
+    // share the same color. Assign color 0 to the source and 1 - color to each
+    // neighbor via BFS. If a neighbor already has the same color → not bipartite.
     //
     // Time Complexity:  O(V + E) — each node and edge is processed once
     // Space Complexity: O(V)     — color array + BFS queue
     // -------------------------------------------------------------------------
 
-    public boolean isBipartite(int[][] graph) {
+    /*
+    public boolean isBipartite_bfs(int[][] graph) {
         int V = graph.length;
         int[] color = new int[V];
-        for (int i = 0; i < V; i++) color[i] = -1;  // -1 = uncolored
+        for (int i = 0; i < V; i++) color[i] = -1;
 
         for (int i = 0; i < V; i++) {
             if (color[i] == -1) {
@@ -40,7 +40,6 @@ class Solution {
 
                 while (!q.isEmpty()) {
                     int node = q.poll();
-
                     for (int adjNode : graph[node]) {
                         if (color[adjNode] == -1) {
                             color[adjNode] = 1 - color[node];
@@ -50,6 +49,44 @@ class Solution {
                         }
                     }
                 }
+            }
+        }
+        return true;
+    }
+    */
+
+    // -------------------------------------------------------------------------
+    // Approach 2: DFS 2-Coloring
+    // -------------------------------------------------------------------------
+    // Same 2-coloring logic but using recursive DFS. Assign color 0 to the
+    // source, then recursively assign opposite colors to neighbors.
+    // If a neighbor already has the same color as the current node → not bipartite.
+    //
+    // Time Complexity:  O(V + E) — each node and edge is processed once
+    // Space Complexity: O(V)     — color array + recursion call stack
+    // -------------------------------------------------------------------------
+
+    public boolean isBipartite(int[][] graph) {
+        int V = graph.length;
+        int[] color = new int[V];
+        Arrays.fill(color, -1);
+
+        for (int i = 0; i < V; i++) {
+            if (color[i] == -1) {
+                color[i] = 0;
+                if (!dfs(i, graph, color)) return false;
+            }
+        }
+        return true;
+    }
+
+    private boolean dfs(int node, int[][] graph, int[] color) {
+        for (int adjNode : graph[node]) {
+            if (color[adjNode] == -1) {
+                color[adjNode] = 1 - color[node];
+                if (!dfs(adjNode, graph, color)) return false;
+            } else if (color[adjNode] == color[node]) {
+                return false;
             }
         }
         return true;
