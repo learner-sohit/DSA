@@ -85,6 +85,9 @@ Here is a summary of the problems I've solved so far:
 | Detect Cycle in an Undirected Graph                        | [Solution](./detect-cycle-in-an-undirected-graph)                  | Medium     |
 | 542. 01 Matrix                                             | [Solution](./01-matrix)                                            | Medium     |
 | 130. Surrounded Regions                                    | [Solution](./surrounded-regions)                                   | Medium     |
+| 1020. Number of Enclaves                                   | [Solution](./number-of-enclaves)                                   | Medium     |
+| 200. Number of Islands                                     | [Solution](./number-of-islands)                                    | Medium     |
+| 785. Is Graph Bipartite?                                   | [Solution](./is-graph-bipartite)                                   | Medium     |
 
 ## How to Use
 
