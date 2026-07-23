@@ -90,6 +90,7 @@ Here is a summary of the problems I've solved so far:
 | 785. Is Graph Bipartite?                                   | [Solution](./is-graph-bipartite)                                   | Medium     |
 | Detect Cycle in a Directed Graph                           | [Solution](./detect-cycle-in-a-directed-graph)                     | Medium     |
 | Topological Sort                                           | [Solution](./topological-sort)                                     | Medium     |
+| 207. Course Schedule                                       | [Solution](./course-schedule)                                      | Medium     |
 
 ## How to Use
 
