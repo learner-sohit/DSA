@@ -89,6 +89,7 @@ Here is a summary of the problems I've solved so far:
 | 200. Number of Islands                                     | [Solution](./number-of-islands)                                    | Medium     |
 | 785. Is Graph Bipartite?                                   | [Solution](./is-graph-bipartite)                                   | Medium     |
 | Detect Cycle in a Directed Graph                           | [Solution](./detect-cycle-in-a-directed-graph)                     | Medium     |
+| Topological Sort                                           | [Solution](./topological-sort)                                     | Medium     |
 
 ## How to Use
 
