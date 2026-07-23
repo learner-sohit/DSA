@@ -19,24 +19,11 @@ V = 6, edges = [[5,2],[5,0],[4,0],[4,1],[2,3],[3,1]]
 
 **Output:** `[5, 4, 2, 3, 1, 0]` *(one valid ordering)*
 
-**Explanation:** Every edge goes from a node that appears earlier to one that appears later in the output list.
-
 ---
 
-## Approach: DFS + Stack (Reverse Finish Order)
+## Approach 1: DFS + Stack (Reverse Finish Order)
 
-Run DFS on every unvisited node. A node is pushed to the stack **only after all of its descendants have been fully explored** (post-order). This guarantees that when we pop the stack, every node appears before the nodes it points to.
-
-### Algorithm
-
-1. Build a directed adjacency list from `edges`.
-2. Initialize a `visited` boolean array of size `V` and an empty `Stack`.
-3. For each unvisited node `i`, call `dfs(i, ...)`.
-4. In DFS:
-   - Mark `node` as visited.
-   - Recursively visit all unvisited neighbors.
-   - After all neighbors are done → `st.push(node)`.
-5. Pop all elements from the stack into the result list and return it.
+Run DFS on every unvisited node. A node is pushed to the stack **only after all of its descendants have been fully explored** (post-order). Popping the stack gives a valid topological order.
 
 ### Complexity
 
@@ -44,3 +31,28 @@ Run DFS on every unvisited node. A node is pushed to the stack **only after all 
 |---|---|
 | **Time** | O(V + E) — each vertex and edge is processed once |
 | **Space** | O(V) — visited array + stack + recursion call stack |
+
+---
+
+## Approach 2: BFS / Kahn's Algorithm (Indegree-based)
+
+Compute the **in-degree** (number of incoming edges) for every node. Nodes with in-degree `0` have no prerequisites and can be processed first. After processing a node, decrement the in-degree of its neighbors — any that reach `0` are ready and get enqueued next.
+
+> **Bonus:** If the final result contains fewer than `V` nodes, the graph has a cycle (not a valid DAG).
+
+### Algorithm
+
+1. Build a directed adjacency list from `edges`.
+2. Compute `indegree[]` for all nodes.
+3. Enqueue all nodes with `indegree == 0`.
+4. BFS:
+   - Dequeue a node, add it to `ans`.
+   - For each neighbor, decrement its in-degree; if it reaches `0`, enqueue it.
+5. Return `ans`.
+
+### Complexity
+
+| | Complexity |
+|---|---|
+| **Time** | O(V + E) — each vertex and edge is processed once |
+| **Space** | O(V) — indegree array + BFS queue |
