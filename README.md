@@ -91,6 +91,7 @@ Here is a summary of the problems I've solved so far:
 | Detect Cycle in a Directed Graph                           | [Solution](./detect-cycle-in-a-directed-graph)                     | Medium     |
 | Topological Sort                                           | [Solution](./topological-sort)                                     | Medium     |
 | 207. Course Schedule                                       | [Solution](./course-schedule)                                      | Medium     |
+| 210. Course Schedule II                                    | [Solution](./course-schedule-ii)                                   | Medium     |
 
 ## How to Use
 
