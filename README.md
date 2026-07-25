@@ -94,6 +94,7 @@ Here is a summary of the problems I've solved so far:
 | 210. Course Schedule II                                    | [Solution](./course-schedule-ii)                                   | Medium     |
 | 802. Find Eventual Safe States                             | [Solution](./find-eventual-safe-states)                            | Medium     |
 | Alien Dictionary                                           | [Solution](./alien-dictionary)                                     | Hard       |
+| Shortest Path in Undirected Graph                          | [Solution](./shortest-path-in-undirected-graph)                    | Medium     |
 
 ## How to Use
 
