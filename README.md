@@ -93,6 +93,7 @@ Here is a summary of the problems I've solved so far:
 | 207. Course Schedule                                       | [Solution](./course-schedule)                                      | Medium     |
 | 210. Course Schedule II                                    | [Solution](./course-schedule-ii)                                   | Medium     |
 | 802. Find Eventual Safe States                             | [Solution](./find-eventual-safe-states)                            | Medium     |
+| Alien Dictionary                                           | [Solution](./alien-dictionary)                                     | Hard       |
 
 ## How to Use
 
