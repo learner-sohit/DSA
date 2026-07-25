@@ -65,6 +65,8 @@ class Solution {
             }
         }
 
-        return dist[dest] == Integer.MAX_VALUE ? -1 : dist[dest];
+        // Reaching here means dest was never dequeued → no path exists
+        return -1;
+        // Alternatively: return dist[dest] == Integer.MAX_VALUE ? -1 : dist[dest];
     }
 }
