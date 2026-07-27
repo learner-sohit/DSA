@@ -95,6 +95,7 @@ Here is a summary of the problems I've solved so far:
 | 802. Find Eventual Safe States                             | [Solution](./find-eventual-safe-states)                            | Medium     |
 | Alien Dictionary                                           | [Solution](./alien-dictionary)                                     | Hard       |
 | Shortest Path in Undirected Graph                          | [Solution](./shortest-path-in-undirected-graph)                    | Medium     |
+| Shortest Path in a DAG                                     | [Solution](./shortest-path-in-dag)                                 | Medium     |
 
 ## How to Use
 
