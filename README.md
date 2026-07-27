@@ -96,6 +96,7 @@ Here is a summary of the problems I've solved so far:
 | Alien Dictionary                                           | [Solution](./alien-dictionary)                                     | Hard       |
 | Shortest Path in Undirected Graph                          | [Solution](./shortest-path-in-undirected-graph)                    | Medium     |
 | Shortest Path in a DAG                                     | [Solution](./shortest-path-in-dag)                                 | Medium     |
+| 127. Word Ladder                                           | [Solution](./word-ladder)                                          | Hard       |
 
 ## How to Use
 
