@@ -23,12 +23,6 @@ class Solution {
 
     // -------------------------------------------------------------------------
     // Approach 1: BFS with Parent Tracking
-    // -------------------------------------------------------------------------
-    // For each unvisited vertex, run a BFS and track the parent of every node.
-    // If we encounter an already-visited neighbor that is NOT the parent of the
-    // current node, a cycle exists (back edge detected).
-    // The outer loop handles disconnected graphs.
-    //
     // Time Complexity:  O(V + E) — each vertex and edge is processed once
     // Space Complexity: O(V + E) — adjacency list + visited array + BFS queue
     // -------------------------------------------------------------------------
@@ -72,12 +66,6 @@ class Solution {
 
     // -------------------------------------------------------------------------
     // Approach 2: DFS with Parent Tracking
-    // -------------------------------------------------------------------------
-    // For each unvisited vertex, run a DFS passing the parent along each call.
-    // If we reach an already-visited neighbor that is NOT the parent of the
-    // current node, a back edge is found → cycle detected.
-    // The outer loop handles disconnected graphs.
-    //
     // Time Complexity:  O(V + E) — each vertex and edge is processed once
     // Space Complexity: O(V + E) — adjacency list + visited array + call stack
     // -------------------------------------------------------------------------

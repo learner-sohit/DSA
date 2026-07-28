@@ -18,10 +18,6 @@ class Solution {
 
     // -------------------------------------------------------------------------
     // Approach 1: DFS + Stack (Reverse Finish Order)
-    // -------------------------------------------------------------------------
-    // Run DFS; after fully exploring all descendants of a node, push it onto
-    // a stack. Popping the stack gives a valid topological order.
-    //
     // Time Complexity:  O(V + E) — each vertex and edge is processed once
     // Space Complexity: O(V)     — visited array + stack + recursion call stack
     // -------------------------------------------------------------------------
@@ -55,11 +51,6 @@ class Solution {
 
     // -------------------------------------------------------------------------
     // Approach 2: BFS / Kahn's Algorithm (Indegree-based)
-    // -------------------------------------------------------------------------
-    // Compute the in-degree of every node. Enqueue all nodes with in-degree 0
-    // (no prerequisites). Process each node: add it to the result, then
-    // decrement the in-degree of its neighbors — enqueue any that reach 0.
-    //
     // Time Complexity:  O(V + E) — each vertex and edge is processed once
     // Space Complexity: O(V)     — indegree array + BFS queue
     // -------------------------------------------------------------------------

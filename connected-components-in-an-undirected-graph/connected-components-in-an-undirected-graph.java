@@ -16,11 +16,6 @@ class Solution {
 
     // -------------------------------------------------------------------------
     // Approach: BFS for each unvisited node
-    // -------------------------------------------------------------------------
-    // Build an adjacency list from the edge list. Iterate over every vertex;
-    // for each unvisited vertex, perform a BFS to collect all vertices reachable
-    // from it into one component, then add that component to the answer.
-    //
     // Time Complexity:  O(V + E) — each vertex and edge is processed once
     // Space Complexity: O(V + E) — adjacency list + visited array + BFS queue
     // -------------------------------------------------------------------------

@@ -14,10 +14,6 @@ class Solution {
 
     // -------------------------------------------------------------------------
     // Approach: DFS using Recursion
-    // -------------------------------------------------------------------------
-    // Start from source node 0, use a visited array to avoid revisiting nodes.
-    // Recursively visit each unvisited neighbor before backtracking.
-    //
     // Time Complexity:  O(V + E) — each vertex and edge is processed once
     // Space Complexity: O(V)     — visited array + recursion call stack
     // -------------------------------------------------------------------------

@@ -18,27 +18,6 @@ class Solution {
 
     // -------------------------------------------------------------------------
     // Approach: Reverse Graph + BFS (Kahn's Algorithm)
-    // -------------------------------------------------------------------------
-    // Key Insight:
-    //   A node is safe if it does NOT lie on a cycle (or lead into one).
-    //   In the original graph, terminal nodes (out-degree 0) are trivially safe.
-    //   Instead of directly detecting cycles, we reverse all edges:
-    //     - In the reversed graph, terminal nodes become source nodes (in-degree 0).
-    //     - We then run Kahn's algorithm on the reversed graph.
-    //     - Nodes that get processed (in-degree reaches 0) are safe nodes,
-    //       because they can "reach" a terminal in the original graph.
-    //     - Nodes that are never processed remain stuck in a cycle → unsafe.
-    //
-    // Steps:
-    //   1. Build reversed adjacency list: for each edge u→v in original, add v→u.
-    //   2. Compute in-degree of each node in the ORIGINAL graph (= out-degree
-    //      in original = number of outgoing edges from u).
-    //   3. Enqueue nodes with in-degree 0 in the reversed graph
-    //      (= out-degree 0 in original = terminal nodes).
-    //   4. BFS (Kahn's): dequeue node, add to answer, decrement in-degrees
-    //      of its neighbors in the reversed graph; enqueue those reaching 0.
-    //   5. Sort and return the answer list.
-    //
     // Time Complexity:  O(V + E + V log V) — BFS is O(V+E), sort is O(V log V)
     // Space Complexity: O(V + E) — reversed adjacency list + in-degree array + queue
     // -------------------------------------------------------------------------

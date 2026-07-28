@@ -17,19 +17,6 @@ class Solution {
 
     // -------------------------------------------------------------------------
     // Approach: BFS (Shortest Path in Unweighted Graph)
-    // -------------------------------------------------------------------------
-    // In an unweighted graph, BFS naturally finds the shortest path because
-    // it explores nodes level by level (each level = one edge away from src).
-    // We track the shortest distance to each node in a dist[] array,
-    // initialized to Integer.MAX_VALUE (unvisited).
-    //
-    // Steps:
-    //   1. Build an undirected adjacency list from edges.
-    //   2. Set dist[src] = 0 and enqueue src.
-    //   3. BFS: for each dequeued node, if it is dest → return dist[node].
-    //      For each neighbor, if a shorter path is found, update dist and enqueue.
-    //   4. After BFS, if dist[dest] is still MAX_VALUE → no path → return -1.
-    //
     // Time Complexity:  O(V + E)
     // Space Complexity: O(V + E) — adjacency list + dist array + queue
     // -------------------------------------------------------------------------

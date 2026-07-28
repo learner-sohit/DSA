@@ -15,11 +15,6 @@ class Solution {
 
     // -------------------------------------------------------------------------
     // Approach: BFS — count connected components of land cells
-    // -------------------------------------------------------------------------
-    // For every unvisited land cell ('1'), increment the island count and run
-    // BFS to mark the entire connected land region as visited. Repeat until
-    // all cells are processed.
-    //
     // Time Complexity:  O(M * N) — every cell is enqueued and processed at most once
     // Space Complexity: O(M * N) — visited array + BFS queue
     // -------------------------------------------------------------------------

@@ -14,11 +14,6 @@ class Solution {
 
     // -------------------------------------------------------------------------
     // Approach: Multi-source BFS from all 0-cells simultaneously
-    // -------------------------------------------------------------------------
-    // Instead of running BFS from each 1-cell to find the nearest 0 (brute force),
-    // we flip the perspective: enqueue ALL 0-cells at time 0 and spread outward.
-    // Each 1-cell gets assigned the distance at the moment BFS first reaches it.
-    //
     // Time Complexity:  O(M * N) — every cell is enqueued and processed at most once
     // Space Complexity: O(M * N) — visited array + BFS queue + answer array
     // -------------------------------------------------------------------------

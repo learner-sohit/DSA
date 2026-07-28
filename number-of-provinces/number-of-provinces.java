@@ -16,11 +16,6 @@ class Solution {
 
     // -------------------------------------------------------------------------
     // Approach: DFS on Adjacency Matrix
-    // -------------------------------------------------------------------------
-    // Treat the matrix as an implicit graph. For each unvisited node, run a DFS
-    // to mark all nodes in its connected component as visited, then increment
-    // the province counter.
-    //
     // Time Complexity:  O(V^2) — for each node we scan its entire row
     // Space Complexity: O(V)   — visited array + recursion call stack
     // -------------------------------------------------------------------------

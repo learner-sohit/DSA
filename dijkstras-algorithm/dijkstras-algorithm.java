@@ -28,20 +28,6 @@ class Solution {
 
     // -------------------------------------------------------------------------
     // Approach 1: Dijkstra's Algorithm (TreeSet)
-    // -------------------------------------------------------------------------
-    // Uses a TreeSet as a self-balancing BST ordered by (weight, node).
-    // Key advantage over PriorityQueue: supports O(log N) removal of stale entries,
-    // so the set never holds outdated distances — no stale-entry check needed.
-    // Comparator breaks ties by node value to ensure uniqueness in the TreeSet.
-    //
-    // Steps:
-    //   1. Build an undirected weighted adjacency list.
-    //   2. Initialize dist[] = MAX_VALUE; dist[src] = 0.
-    //   3. Add (src, 0) to TreeSet.
-    //   4. Poll minimum (pollFirst); for each neighbor, if relaxation improves
-    //      distance → remove old entry, update dist, add new entry.
-    //   5. Replace MAX_VALUE entries with -1 (unreachable nodes).
-    //
     // Time Complexity:  O((V + E) log V) — each update does O(log V) TreeSet ops
     // Space Complexity: O(V + E)         — adjacency list + dist array + TreeSet
     // -------------------------------------------------------------------------
@@ -87,11 +73,6 @@ class Solution {
 
     // -------------------------------------------------------------------------
     // Approach 2: Dijkstra's Algorithm (PriorityQueue / Min-Heap)
-    // -------------------------------------------------------------------------
-    // Uses a min-heap. Stale entries are NOT removed; instead they are skipped
-    // lazily with: if (p.wt > dist[p.val]) continue.
-    // Simpler to implement but may hold more entries in the heap than the TreeSet.
-    //
     // Time Complexity:  O((V + E) log V)
     // Space Complexity: O(V + E)
     // -------------------------------------------------------------------------

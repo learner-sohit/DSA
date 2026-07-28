@@ -19,21 +19,6 @@ class Solution {
 
     // -------------------------------------------------------------------------
     // Approach: BFS — Kahn's Algorithm (Topological Sort)
-    // -------------------------------------------------------------------------
-    // Model the problem as a directed graph: prerequisite[b] → course[a].
-    // If all courses can be completed, the graph must be a DAG (no cycles).
-    // Kahn's algorithm processes nodes in topological order by repeatedly
-    // picking nodes with in-degree 0. If we can process all numCourses nodes,
-    // there is no cycle and all courses can be finished.
-    //
-    // Steps:
-    //   1. Build adjacency list: prereq → course (directed edge).
-    //   2. Compute in-degree for each course.
-    //   3. Enqueue all courses with in-degree 0 (no prerequisites).
-    //   4. BFS: dequeue a course, increment completedCourses, then reduce
-    //      in-degrees of dependent courses; enqueue any that reach 0.
-    //   5. Return completedCourses == numCourses.
-    //
     // Time Complexity:  O(V + E) — V = numCourses, E = prerequisites.length
     // Space Complexity: O(V + E) — adjacency list + queue + in-degree array
     // -------------------------------------------------------------------------

@@ -31,25 +31,6 @@ class Solution {
 
     // -------------------------------------------------------------------------
     // Approach: BFS (Level-by-Level Word Transformation)
-    // -------------------------------------------------------------------------
-    // Model the problem as a graph where each word is a node and an edge exists
-    // between two words if they differ by exactly one character. We want the
-    // shortest path from beginWord to endWord → BFS is the natural choice.
-    //
-    // To avoid generating the full graph (expensive), we:
-    //   1. Try replacing each character position with 'a'-'z'.
-    //   2. Check if the resulting word is in the word set.
-    //   3. Remove words from the set once visited to prevent revisiting.
-    //
-    // Early exit: if the next word equals endWord, return level + 1 immediately.
-    //
-    // Steps:
-    //   1. Load wordList into a HashSet for O(1) lookup.
-    //   2. If endWord is not in the set, return 0 immediately.
-    //   3. BFS: enqueue (beginWord, level=1); for each word, try all single-char
-    //      replacements; if a valid word is found, enqueue it and remove from set.
-    //   4. If BFS exhausts without reaching endWord, return 0.
-    //
     // Time Complexity:  O(N * M * 26) — N = wordList size, M = word length
     // Space Complexity: O(N)          — HashSet + BFS queue
     // -------------------------------------------------------------------------

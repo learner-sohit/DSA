@@ -27,20 +27,6 @@ class Solution {
 
     // -------------------------------------------------------------------------
     // Approach: Topological Sort (DFS) + Relaxation
-    // -------------------------------------------------------------------------
-    // In a DAG, we can compute shortest paths more efficiently than Dijkstra
-    // by processing nodes in topological order. Since a DAG has no cycles,
-    // topological order guarantees that when we process a node, all nodes
-    // that could update its distance have already been processed.
-    //
-    // Steps:
-    //   1. Build a directed weighted adjacency list.
-    //   2. Run DFS-based topological sort → push nodes to a stack in finish order.
-    //   3. Initialize dist[0] = 0, all others = MAX_VALUE.
-    //   4. Pop nodes from the stack (topological order) and relax edges:
-    //      if dist[node] + wt < dist[v] → update dist[v].
-    //   5. Replace any remaining MAX_VALUE with -1 (unreachable nodes).
-    //
     // Time Complexity:  O(V + E) — topological sort + single relaxation pass
     // Space Complexity: O(V + E) — adjacency list + dist array + visited + stack
     // -------------------------------------------------------------------------

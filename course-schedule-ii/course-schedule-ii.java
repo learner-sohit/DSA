@@ -18,21 +18,6 @@ class Solution {
 
     // -------------------------------------------------------------------------
     // Approach: BFS — Kahn's Algorithm (Topological Sort)
-    // -------------------------------------------------------------------------
-    // Model the problem as a directed graph: prereq → course.
-    // A valid course order exists only if the graph is a DAG (no cycles).
-    // Kahn's algorithm produces a topological ordering by repeatedly picking
-    // nodes with in-degree 0. If all numCourses nodes are processed, the
-    // resulting order array is the answer. Otherwise, a cycle exists → return [].
-    //
-    // Steps:
-    //   1. Build adjacency list: prereq → course (directed edge).
-    //   2. Compute in-degree for each course.
-    //   3. Enqueue all courses with in-degree 0 (no prerequisites).
-    //   4. BFS: dequeue a course, record it in order[], then reduce in-degrees
-    //      of dependent courses; enqueue any that reach 0.
-    //   5. If index == numCourses → return order[], else return [].
-    //
     // Time Complexity:  O(V + E) — V = numCourses, E = prerequisites.length
     // Space Complexity: O(V + E) — adjacency list + queue + in-degree array
     // -------------------------------------------------------------------------

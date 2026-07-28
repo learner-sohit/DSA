@@ -17,11 +17,6 @@ class Solution {
 
     // -------------------------------------------------------------------------
     // Approach 1: BFS 2-Coloring
-    // -------------------------------------------------------------------------
-    // Try to color the graph using 2 colors such that no two adjacent nodes
-    // share the same color. Assign color 0 to the source and 1 - color to each
-    // neighbor via BFS. If a neighbor already has the same color → not bipartite.
-    //
     // Time Complexity:  O(V + E) — each node and edge is processed once
     // Space Complexity: O(V)     — color array + BFS queue
     // -------------------------------------------------------------------------
@@ -57,11 +52,6 @@ class Solution {
 
     // -------------------------------------------------------------------------
     // Approach 2: DFS 2-Coloring
-    // -------------------------------------------------------------------------
-    // Same 2-coloring logic but using recursive DFS. Assign color 0 to the
-    // source, then recursively assign opposite colors to neighbors.
-    // If a neighbor already has the same color as the current node → not bipartite.
-    //
     // Time Complexity:  O(V + E) — each node and edge is processed once
     // Space Complexity: O(V)     — color array + recursion call stack
     // -------------------------------------------------------------------------

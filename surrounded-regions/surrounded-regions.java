@@ -14,11 +14,6 @@ class Solution {
 
     // -------------------------------------------------------------------------
     // Approach: Boundary DFS (Reverse Thinking)
-    // -------------------------------------------------------------------------
-    // Instead of finding surrounded regions directly, mark all 'O's that are
-    // connected to the border (i.e., safe / not capturable) using DFS from
-    // every border cell. Then flip all remaining unvisited 'O's to 'X'.
-    //
     // Time Complexity:  O(M * N) — every cell is visited at most once
     // Space Complexity: O(M * N) — visited array + recursion call stack
     // -------------------------------------------------------------------------

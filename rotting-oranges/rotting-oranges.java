@@ -20,11 +20,6 @@ class Solution {
 
     // -------------------------------------------------------------------------
     // Approach: Multi-source BFS
-    // -------------------------------------------------------------------------
-    // Enqueue all initially rotten oranges simultaneously (time = 0).
-    // Spread rot level by level (minute by minute) using BFS.
-    // Track the count of fresh oranges; if any remain after BFS, return -1.
-    //
     // Time Complexity:  O(M * N) — every cell is visited at most once
     // Space Complexity: O(M * N) — BFS queue can hold all cells in the worst case
     // -------------------------------------------------------------------------

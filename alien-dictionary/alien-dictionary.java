@@ -19,23 +19,6 @@ class Solution {
 
     // -------------------------------------------------------------------------
     // Approach: Topological Sort — BFS (Kahn's Algorithm)
-    // -------------------------------------------------------------------------
-    // The sorted word list gives us ordering constraints between characters.
-    // By comparing adjacent words character by character, we can derive directed
-    // edges: the first differing character tells us which letter comes before
-    // the other in the alien alphabet.
-    //
-    // Steps:
-    //   1. Initialize adjacency list and in-degree map for every unique character.
-    //   2. Compare each adjacent pair of words:
-    //      - Find the first differing character → add directed edge u → v.
-    //      - Edge case: if word1 is longer than word2 and word2 is a prefix
-    //        of word1, the input is invalid → return "".
-    //   3. Enqueue all characters with in-degree 0.
-    //   4. BFS (Kahn's): dequeue a character, append to answer, decrement
-    //      in-degrees of neighbors, enqueue those reaching 0.
-    //   5. If answer length != total unique characters → cycle exists → return "".
-    //
     // Time Complexity:  O(N * L + K)  — N = words, L = avg word length, K = unique chars
     // Space Complexity: O(K + E)      — adjacency list + in-degree map + queue
     // -------------------------------------------------------------------------

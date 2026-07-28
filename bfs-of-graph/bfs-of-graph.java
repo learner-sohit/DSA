@@ -16,10 +16,6 @@ class Solution {
 
     // -------------------------------------------------------------------------
     // Approach: BFS using Queue
-    // -------------------------------------------------------------------------
-    // Start from source node 0, use a visited array to avoid revisiting nodes.
-    // Use a Queue to process nodes level by level.
-    //
     // Time Complexity:  O(V + E) — each vertex and edge is processed once
     // Space Complexity: O(V)     — visited array + queue
     // -------------------------------------------------------------------------

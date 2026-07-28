@@ -16,10 +16,6 @@ class Solution {
 
     // -------------------------------------------------------------------------
     // Approach 1: Brute Force — BFS + pairwise edge check
-    // -------------------------------------------------------------------------
-    // Find each connected component via BFS, then check every pair of vertices
-    // in the component against the edge list to confirm all edges exist.
-    //
     // Time Complexity:  O(V + E + C^2 * E) — C = component size, E = edges
     // Space Complexity: O(V + E)            — adjacency list + visited array
     // -------------------------------------------------------------------------
@@ -79,12 +75,6 @@ class Solution {
 
     // -------------------------------------------------------------------------
     // Approach 2: Optimal — BFS + degree-sum formula
-    // -------------------------------------------------------------------------
-    // A component with V vertices is complete iff it has exactly V*(V-1)/2 edges.
-    // During BFS, count vertices and sum up all degrees. Since each edge is
-    // counted twice (once per endpoint), actual edges = degreeSum / 2.
-    // Compare with the expected count for a complete graph.
-    //
     // Time Complexity:  O(V + E) — single BFS pass over all vertices and edges
     // Space Complexity: O(V + E) — adjacency list + visited array + BFS queue
     // -------------------------------------------------------------------------

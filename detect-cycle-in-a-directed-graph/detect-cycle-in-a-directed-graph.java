@@ -16,18 +16,6 @@ class Solution {
 
     // -------------------------------------------------------------------------
     // Approach 1: BFS — Kahn's Algorithm (Topological Sort)
-    // -------------------------------------------------------------------------
-    // If the graph is a DAG (no cycles), Kahn's algorithm can process all V
-    // nodes in topological order. If any nodes are left unprocessed (count < V),
-    // it means they are part of a cycle.
-    //
-    // Steps:
-    //   1. Build adjacency list and compute in-degree for each node.
-    //   2. Enqueue all nodes with in-degree 0.
-    //   3. BFS: for each dequeued node, reduce neighbors' in-degrees;
-    //      enqueue any neighbor whose in-degree drops to 0.
-    //   4. If processed count < V → cycle exists.
-    //
     // Time Complexity:  O(V + E)
     // Space Complexity: O(V + E) — adjacency list + queue + in-degree array
     // -------------------------------------------------------------------------
@@ -64,15 +52,6 @@ class Solution {
 
     // -------------------------------------------------------------------------
     // Approach 2: DFS with Path-Visited Tracking
-    // -------------------------------------------------------------------------
-    // In a directed graph, a cycle exists only if we reach a node that is
-    // already on the CURRENT DFS path (not just any visited node).
-    // We maintain two arrays:
-    //   - visited[]     : marks nodes visited in any DFS call (global)
-    //   - pathVisited[] : marks nodes on the current active DFS path (local)
-    // On backtracking, pathVisited[node] is reset to false.
-    // The outer loop handles disconnected components.
-    //
     // Time Complexity:  O(V + E)
     // Space Complexity: O(V) — two boolean arrays + recursion call stack
     // -------------------------------------------------------------------------

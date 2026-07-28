@@ -16,11 +16,6 @@ class Solution {
 
     // -------------------------------------------------------------------------
     // Approach: BFS (Iterative Flood Fill)
-    // -------------------------------------------------------------------------
-    // Record the original color at (sr, sc). BFS outward, recoloring every
-    // 4-directionally adjacent pixel that still has that original color.
-    // An early-exit guard (original == new color) prevents an infinite loop.
-    //
     // Time Complexity:  O(M * N) — each pixel is enqueued and processed at most once
     // Space Complexity: O(M * N) — BFS queue can hold all pixels in the worst case
     // -------------------------------------------------------------------------

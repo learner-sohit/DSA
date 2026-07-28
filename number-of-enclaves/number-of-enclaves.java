@@ -13,13 +13,6 @@ class Solution {
 
     // -------------------------------------------------------------------------
     // Approach: Boundary DFS (same pattern as Surrounded Regions)
-    // -------------------------------------------------------------------------
-    // Mark all land cells reachable from the border using DFS — these are NOT
-    // enclaves. Then count all remaining unvisited land cells in the interior.
-    //
-    // Note: Can be further optimized by marking visited land cells directly in
-    // the grid (flipping 1 → 0) to avoid the separate visited array.
-    //
     // Time Complexity:  O(M * N) — every cell is visited at most once
     // Space Complexity: O(M * N) — visited array + recursion call stack
     // -------------------------------------------------------------------------
