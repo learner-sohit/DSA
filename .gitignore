@@ -31,3 +31,9 @@ Solution.java
 
 # Local Codex instructions
 CODEX_INSTRUCTIONS.md
+
+# Java compiled bytecode
+*.class
+
+# Helper/scratch scripts
+*.py
