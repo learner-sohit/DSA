@@ -98,6 +98,7 @@ Here is a summary of the problems I've solved so far:
 | Shortest Path in a DAG                                     | [Solution](./shortest-path-in-dag)                                 | Medium     |
 | 127. Word Ladder                                           | [Solution](./word-ladder)                                          | Hard       |
 | Dijkstra's Algorithm                                       | [Solution](./dijkstras-algorithm)                                  | Medium     |
+| Shortest Path in a Binary Maze                             | [Solution](./shortest-path-in-a-binary-maze)                       | Medium     |
 
 ## How to Use
 
