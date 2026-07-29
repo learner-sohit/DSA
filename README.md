@@ -99,6 +99,7 @@ Here is a summary of the problems I've solved so far:
 | 127. Word Ladder                                           | [Solution](./word-ladder)                                          | Hard       |
 | Dijkstra's Algorithm                                       | [Solution](./dijkstras-algorithm)                                  | Medium     |
 | Shortest Path in a Binary Maze                             | [Solution](./shortest-path-in-a-binary-maze)                       | Medium     |
+| 1091. Shortest Path in Binary Matrix                       | [Solution](./shortest-path-in-binary-matrix)                       | Medium     |
 
 ## How to Use
 
