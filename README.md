@@ -101,6 +101,7 @@ Here is a summary of the problems I've solved so far:
 | Shortest Path in a Binary Maze                             | [Solution](./shortest-path-in-a-binary-maze)                       | Medium     |
 | 1091. Shortest Path in Binary Matrix                       | [Solution](./shortest-path-in-binary-matrix)                       | Medium     |
 | 1631. Path With Minimum Effort                             | [Solution](./path-with-minimum-effort)                             | Medium     |
+| 787. Cheapest Flights Within K Stops                       | [Solution](./cheapest-flights-within-k-stops)                      | Medium     |
 
 ## How to Use
 
