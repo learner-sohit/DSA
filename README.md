@@ -100,6 +100,7 @@ Here is a summary of the problems I've solved so far:
 | Dijkstra's Algorithm                                       | [Solution](./dijkstras-algorithm)                                  | Medium     |
 | Shortest Path in a Binary Maze                             | [Solution](./shortest-path-in-a-binary-maze)                       | Medium     |
 | 1091. Shortest Path in Binary Matrix                       | [Solution](./shortest-path-in-binary-matrix)                       | Medium     |
+| 1631. Path With Minimum Effort                             | [Solution](./path-with-minimum-effort)                             | Medium     |
 
 ## How to Use
 
