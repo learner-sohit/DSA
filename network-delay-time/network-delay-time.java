@@ -15,7 +15,7 @@ import java.util.PriorityQueue;
 class Solution {
 
     // -------------------------------------------------------------------------
-    // Approach 1: Dijkstra's Algorithm + Stale Entry Check
+    // Approach: Dijkstra's Algorithm + Stale Entry Check
     // Time Complexity:  O((N + E) log N)
     // Space Complexity: O(N + E)
     // -------------------------------------------------------------------------
@@ -63,46 +63,4 @@ class Solution {
 
         return ans;
     }
-
-    // -------------------------------------------------------------------------
-    // Approach 2: Dijkstra's Algorithm (no stale check, skip src in final pass)
-    // Time Complexity:  O((N + E) log N)
-    // Space Complexity: O(N + E)
-    // -------------------------------------------------------------------------
-
-    /*
-    public int networkDelayTime(int[][] times, int n, int k) {
-        List<List<int[]>> adj = new ArrayList<>();
-        for (int i = 0; i <= n; i++) adj.add(new ArrayList<>());
-        for (int[] time : times) {
-            adj.get(time[0]).add(new int[]{time[1], time[2]});
-        }
-
-        int[] dist = new int[n + 1];
-        for (int i = 0; i <= n; i++) dist[i] = Integer.MAX_VALUE;
-        dist[k] = 0;
-
-        PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> a[0] - b[0]);
-        pq.offer(new int[]{0, k});
-
-        while (!pq.isEmpty()) {
-            int[] curr = pq.poll();
-            int time = curr[0];
-            int node = curr[1];
-            for (int[] next : adj.get(node)) {
-                if (time + next[1] < dist[next[0]]) {
-                    dist[next[0]] = time + next[1];
-                    pq.offer(new int[]{time + next[1], next[0]});
-                }
-            }
-        }
-
-        int ans = -1;
-        for (int i = 1; i <= n; i++) {
-            if (i == k) continue;
-            ans = Math.max(ans, dist[i]);
-        }
-        return ans != Integer.MAX_VALUE ? ans : -1;
-    }
-    */
 }

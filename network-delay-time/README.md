@@ -25,15 +25,15 @@ All nodes receive the signal by time `2`.
 
 ---
 
-## Approach 1: Dijkstra's + Stale Entry Check (Active)
+## Approach: Dijkstra's Algorithm + Stale Entry Check
 
-> **Key Insight:** Run Dijkstra's from source `k`. The answer is the **maximum** shortest distance across all nodes — the signal must reach the *last* node. With the stale entry check (`if time > dist[node] → skip`), we avoid redundant processing of outdated heap entries. Final pass iterates all nodes `1..n` and returns `-1` immediately if any is unreachable.
+> **Key Insight:** Run Dijkstra's from source `k`. The answer is the **maximum** shortest distance across all nodes — the signal must reach the *last* node to arrive. The stale entry check (`if time > dist[node] → skip`) avoids redundant processing of outdated heap entries. The final pass returns `-1` immediately if any node is unreachable.
 
 ### Algorithm
 
 1. Build a directed adjacency list from `times`.
 2. Initialize `dist[n+1] = MAX_VALUE`; set `dist[k] = 0`.
-3. Push `[time=0, node=k]` into a **min-heap**.
+3. Push `[time=0, node=k]` into a **min-heap** (ordered by time).
 4. Dijkstra's: poll min node; **skip if stale** (`time > dist[node]`); relax outgoing edges.
 5. Final pass: if any `dist[i] == MAX_VALUE` → return `-1`; else return `max(dist[1..n])`.
 
@@ -41,18 +41,5 @@ All nodes receive the signal by time `2`.
 
 | | Complexity |
 |---|---|
-| **Time** | O((N + E) log N) |
-| **Space** | O(N + E) |
-
----
-
-## Approach 2: Dijkstra's (no stale check, skip src in final pass)
-
-> Same algorithm without the stale entry check. Final pass skips the source node `k` and uses `ans = -1` as sentinel, returning `-1` if the max is still `MAX_VALUE`.
-
-### Complexity
-
-| | Complexity |
-|---|---|
-| **Time** | O((N + E) log N) |
-| **Space** | O(N + E) |
+| **Time** | O((N + E) log N) — each node/edge processed with heap operations |
+| **Space** | O(N + E) — adjacency list + dist array + priority queue |
