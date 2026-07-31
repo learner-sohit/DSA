@@ -52,8 +52,8 @@ class Solution {
             if (time > dist[node]) continue; // skip stale entries
 
             for (int[] next : adj.get(node)) {
-                int adjNode  = next[0];
-                int adjTime  = next[1];
+                int adjNode   = next[0];
+                long adjTime  = next[1];
 
                 if (time + adjTime < dist[adjNode]) {
                     // Found a strictly shorter path — reset count
