@@ -103,6 +103,7 @@ Here is a summary of the problems I've solved so far:
 | 1631. Path With Minimum Effort                             | [Solution](./path-with-minimum-effort)                             | Medium     |
 | 787. Cheapest Flights Within K Stops                       | [Solution](./cheapest-flights-within-k-stops)                      | Medium     |
 | 743. Network Delay Time                                    | [Solution](./network-delay-time)                                   | Medium     |
+| 1976. Number of Ways to Arrive at Destination              | [Solution](./number-of-ways-to-arrive-at-destination)              | Medium     |
 
 ## How to Use
 
