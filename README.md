@@ -102,6 +102,7 @@ Here is a summary of the problems I've solved so far:
 | 1091. Shortest Path in Binary Matrix                       | [Solution](./shortest-path-in-binary-matrix)                       | Medium     |
 | 1631. Path With Minimum Effort                             | [Solution](./path-with-minimum-effort)                             | Medium     |
 | 787. Cheapest Flights Within K Stops                       | [Solution](./cheapest-flights-within-k-stops)                      | Medium     |
+| 743. Network Delay Time                                    | [Solution](./network-delay-time)                                   | Medium     |
 
 ## How to Use
 
