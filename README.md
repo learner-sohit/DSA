@@ -109,6 +109,7 @@ Here is a summary of the problems I've solved so far:
 | Floyd-Warshall Algorithm                                   | [Solution](./floyd-warshall-algorithm)                             | Medium     |
 | 1334. Find the City With the Smallest Number of Neighbors at a Threshold Distance | [Solution](./find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance) | Medium |
 | Maximum Pair Strength                                      | [Solution](./maximum-pair-strength)                                | Medium     |
+| Count Subarrays With Even and Odd Ratio                    | [Solution](./count-subarrays-with-even-and-odd-ratio)              | Medium     |
 
 ## How to Use
 
