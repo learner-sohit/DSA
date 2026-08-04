@@ -4,7 +4,7 @@
 
 ## Problem Description
 
-Given an undirected graph with `V` vertices (numbered `0` to `V-1`) and a list of edges, find all **connected components** of the graph. Return each component as a list of its vertices, and return all components together as a list of lists.
+Given an undirected graph with `V` vertices (numbered `0` to `V-1`) and a list of edges, count the number of **connected components** in the graph.
 
 ### Example
 
@@ -13,33 +13,53 @@ Given an undirected graph with `V` vertices (numbered `0` to `V-1`) and a list o
 V = 6, edges = [[0,1],[1,2],[3,4]]
 ```
 
-**Output:** `[[0, 1, 2], [3, 4], [5]]`
+**Output:** `3`
 
 **Explanation:**
 - Vertices 0, 1, and 2 are connected → one component.
 - Vertices 3 and 4 are connected → one component.
 - Vertex 5 has no edges → isolated component.
+- Total connected components = 3.
 
 ---
 
-## Approach: BFS for Each Unvisited Node
+## Approach 1: DFS for Each Unvisited Node
 
-Build an adjacency list from the given edge list. Then iterate over every vertex; whenever an unvisited vertex is found, launch a BFS from it to explore and collect all vertices reachable from it into a single component.
+Build an adjacency list from the given edge list. Then iterate over every vertex; whenever an unvisited vertex is found, it means a new component has started. Increment the component count and use DFS to mark every vertex reachable from that starting vertex.
 
 ### Algorithm
 
-1. Build an adjacency list of size `V` from the `edges` array.
+1. Build an adjacency list of size `V` from the edge list.
 2. Initialize a `visited` boolean array of size `V` (all `false`).
 3. Iterate over every vertex `i` from `0` to `V-1`:
-   - If `i` is not yet visited, start a BFS from `i`:
-     - Mark `i` as visited, enqueue it.
-     - While the queue is not empty, dequeue a node, add it to the current component, and enqueue all unvisited neighbors (marking them visited).
-   - Add the completed component to the answer list.
-4. Return the answer list.
+   - If `i` is not visited, increment `components`.
+   - Start DFS from `i` and mark all reachable nodes as visited.
+4. Return `components`.
 
 ### Complexity
 
 | | Complexity |
 |---|---|
 | **Time** | O(V + E) — each vertex and edge is processed once |
-| **Space** | O(V + E) — adjacency list + visited array + BFS queue |
+| **Space** | O(V + E) — adjacency list + visited array + recursion stack |
+
+---
+
+## Approach 2: BFS for Collecting Components
+
+The previous repository solution used BFS to return the actual list of vertices in every component. It follows the same idea of starting a traversal from each unvisited node, but stores each traversed group in a separate list.
+
+### Algorithm
+
+1. Build the adjacency list from the edge array.
+2. Iterate through all vertices.
+3. For every unvisited vertex, start BFS using a queue.
+4. Add every reached vertex to the current component list.
+5. Add the completed component list to the answer.
+
+### Complexity
+
+| | Complexity |
+|---|---|
+| **Time** | O(V + E) |
+| **Space** | O(V + E) |
