@@ -1,4 +1,4 @@
-# Minimum Spanning Tree (Prim's Algorithm)
+# Minimum Spanning Tree (Kruskal's Algorithm)
 
 [Link to Problem on GeeksforGeeks](https://www.geeksforgeeks.org/problems/minimum-spanning-tree/1)
 

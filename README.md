@@ -110,7 +110,7 @@ Here is a summary of the problems I've solved so far:
 | 1334. Find the City With the Smallest Number of Neighbors at a Threshold Distance | [Solution](./find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance) | Medium |
 | Maximum Pair Strength                                      | [Solution](./maximum-pair-strength)                                | Medium     |
 | Count Subarrays With Even and Odd Ratio                    | [Solution](./count-subarrays-with-even-and-odd-ratio)              | Medium     |
-| Minimum Spanning Tree (Prim's Algorithm)                   | [Solution](./minimum-spanning-tree)                                | Medium     |
+| Minimum Spanning Tree (Kruskal's Algorithm)                | [Solution](./minimum-spanning-tree)                                | Medium     |
 
 ## How to Use
 
