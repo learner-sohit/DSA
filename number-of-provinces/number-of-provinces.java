@@ -14,20 +14,65 @@
 
 class Solution {
 
-    // -------------------------------------------------------------------------
-    // Approach: DFS on Adjacency Matrix
-    // Time Complexity:  O(V^2) — for each node we scan its entire row
-    // Space Complexity: O(V)   — visited array + recursion call stack
-    // -------------------------------------------------------------------------
+    // Approach: Union-Find with path compression and union by size.
+    // Time Complexity: O(V^2 * alpha(V)); Space Complexity: O(V).
+
+    private class DisjointSet {
+        private int[] parent;
+        private int[] rank;
+        private int[] size;
+
+        DisjointSet(int n) {
+            parent = new int[n + 1];
+            rank = new int[n + 1];
+            size = new int[n + 1];
+
+            for (int i = 0; i <= n; i++) {
+                parent[i] = i;
+                size[i] = 1;
+            }
+        }
+
+        int findParent(int node) {
+            if (node == parent[node]) {
+                return node;
+            }
+            return parent[node] = findParent(parent[node]);
+        }
+
+        void unionBySize(int u, int v) {
+            int pu = findParent(u);
+            int pv = findParent(v);
+
+            if (pu == pv) {
+                return;
+            }
+
+            if (size[pu] < size[pv]) {
+                parent[pu] = pv;
+                size[pv] += size[pu];
+            } else {
+                parent[pv] = pu;
+                size[pu] += size[pv];
+            }
+        }
+    }
 
     public int findCircleNum(int[][] isConnected) {
-        int provinces = 0;
-        int v = isConnected.length;
-        boolean[] isVisited = new boolean[v];
+        int n = isConnected.length;
+        DisjointSet ds = new DisjointSet(n);
 
-        for (int i = 0; i < v; i++) {
-            if (!isVisited[i]) {
-                dfs(i, isConnected, isVisited);
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (isConnected[i][j] == 1) {
+                    ds.unionBySize(i, j);
+                }
+            }
+        }
+
+        int provinces = 0;
+        for (int i = 0; i < n; i++) {
+            if (ds.findParent(i) == i) {
                 provinces++;
             }
         }
@@ -35,13 +80,30 @@ class Solution {
         return provinces;
     }
 
-    private void dfs(int node, int[][] isConnected, boolean[] isVisited) {
-        isVisited[node] = true;
+    /*
+    // Alternate approach: DFS on the adjacency matrix.
+    public int findCircleNumDfs(int[][] isConnected) {
+        int provinces = 0;
+        boolean[] visited = new boolean[isConnected.length];
 
-        for (int j = 0; j < isConnected[node].length; j++) {
-            if (isConnected[node][j] == 1 && !isVisited[j]) {
-                dfs(j, isConnected, isVisited);
+        for (int i = 0; i < isConnected.length; i++) {
+            if (!visited[i]) {
+                dfs(i, isConnected, visited);
+                provinces++;
+            }
+        }
+
+        return provinces;
+    }
+
+    private void dfs(int node, int[][] isConnected, boolean[] visited) {
+        visited[node] = true;
+
+        for (int neighbor = 0; neighbor < isConnected[node].length; neighbor++) {
+            if (isConnected[node][neighbor] == 1 && !visited[neighbor]) {
+                dfs(neighbor, isConnected, visited);
             }
         }
     }
+    */
 }

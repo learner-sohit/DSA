@@ -23,23 +23,31 @@ isConnected = [[1,1,0],[1,1,0],[0,0,1]]
 
 ---
 
-## Approach: DFS on Adjacency Matrix
+## Approach 1: Union-Find
 
-Instead of building an explicit adjacency list, we treat the `isConnected` matrix directly as a graph. For every unvisited city, we launch a DFS that marks all reachable cities in the same connected component as visited, then count that component as one province.
+Treat every city as a separate set initially. For every `1` in the matrix, union the two corresponding cities. After processing the matrix, each distinct representative corresponds to one province.
 
 ### Algorithm
 
-1. Initialize a `visited` boolean array of size `n` (all `false`).
-2. Iterate over every city `i` from `0` to `n-1`:
-   - If city `i` is not yet visited, run DFS from `i` and increment `provinces`.
-3. In the DFS helper:
-   - Mark the current node as visited.
-   - Scan its row in `isConnected`; for every directly connected and unvisited neighbor, recurse.
-4. Return `provinces`.
+1. Initialize a disjoint-set structure with one set for each city.
+2. Scan every matrix entry. For each `isConnected[i][j] == 1`, union cities `i` and `j` by size.
+3. Count cities that are their own representative.
+4. Return that count.
 
 ### Complexity
 
 | | Complexity |
 |---|---|
-| **Time** | O(V²) — for each node we scan its entire row in the matrix |
-| **Space** | O(V) — visited array + recursion call stack |
+| **Time** | O(V² * alpha(V)) |
+| **Space** | O(V) |
+
+## Approach 2: DFS on Adjacency Matrix
+
+The previous DFS approach treats the matrix directly as a graph. For every unvisited city, DFS marks all cities in the same connected component, which represents one province.
+
+### Complexity
+
+| | Complexity |
+|---|---|
+| **Time** | O(V²) |
+| **Space** | O(V) |
