@@ -24,33 +24,51 @@ edges = [[0,1,2],[0,3,6],[1,2,3],[1,3,8],[1,4,5],[2,4,7],[3,4,9]]
 
 ---
 
-## Approach: Prim's Algorithm (Greedy + Min-Heap)
+## Approach 1: Kruskal's Algorithm (Sort Edges + Union-Find)
 
-> **Key Insight:** Prim's algorithm builds the MST greedily — always picking the **cheapest edge** that connects a new (unvisited) vertex to the growing MST. A min-heap ensures we always process the minimum weight edge efficiently.
+> **Key Insight:** Sort all edges by weight in ascending order. Greedily pick the cheapest edge — add it to the MST only if it doesn't form a cycle. Cycle detection is done in near O(1) using a **Disjoint Set (Union-Find)** with path compression and union by size.
 
 ### Algorithm
 
-1. Build an **undirected** weighted adjacency list.
-2. Initialize `visited[V] = false`; push `[wt=0, node=0]` into a **min-heap**.
-3. While heap is not empty:
-   - Poll the minimum weight edge `[wt, node]`.
-   - If `visited[node]` → skip (already in MST).
-   - Mark `visited[node] = true`; add `wt` to `sum`.
-   - For each unvisited neighbor → push `[edgeWt, adjNode]` into heap.
-4. Return `sum`.
+1. Sort all edges by weight in ascending order.
+2. Initialize a `DisjointSet` of size `V`.
+3. For each edge `(u, v, wt)` in sorted order:
+   - If `findParent(u) != findParent(v)` → no cycle → add `wt` to `mstWt`, call `unionBySize(u, v)`.
+4. Return `mstWt`.
 
 ### Complexity
 
 | | Complexity |
 |---|---|
-| **Time** | O((V + E) log V) — each node/edge processed with heap operations |
-| **Space** | O(V + E) — adjacency list + visited array + priority queue |
+| **Time** | O(E log E) — dominated by sorting edges |
+| **Space** | O(V) — Disjoint Set arrays |
 
-### Prim's vs Kruskal's
+---
 
-| | Prim's | Kruskal's |
+## Approach 2: Prim's Algorithm (Greedy + Min-Heap)
+
+> Grows MST from a source node, always picking the cheapest edge connecting an unvisited node. Uses a min-heap for efficient minimum selection.
+
+### Algorithm
+
+1. Build adjacency list; push `[wt=0, node=0]` into min-heap.
+2. While heap is not empty: poll min, skip if visited; mark visited, add weight, push all unvisited neighbors.
+3. Return total weight.
+
+### Complexity
+
+| | Complexity |
+|---|---|
+| **Time** | O((V + E) log V) |
+| **Space** | O(V + E) |
+
+---
+
+## Kruskal's vs Prim's
+
+| | Kruskal's | Prim's |
 |---|---|---|
-| **Approach** | Grow MST from a node | Sort all edges, add if no cycle |
-| **Data Structure** | Min-heap + visited array | Union-Find (Disjoint Set) |
-| **Best for** | Dense graphs | Sparse graphs |
-| **Complexity** | O((V + E) log V) | O(E log E) |
+| **Approach** | Sort all edges, add if no cycle | Grow MST node by node |
+| **Data Structure** | Union-Find (Disjoint Set) | Min-heap + visited array |
+| **Best for** | Sparse graphs | Dense graphs |
+| **Complexity** | O(E log E) | O((V + E) log V) |
