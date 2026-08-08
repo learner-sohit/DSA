@@ -23,6 +23,19 @@ Return the **minimum total cost** required for the frog to reach the last stair.
 
 ## Explanation
 
+### Space-Optimized Dynamic Programming
+
+The recurrence only depends on the minimum costs for the previous two stairs, so the full `dp` array can be replaced with two variables.
+
+1. Initialize `prev1` and `prev2` to `0`, representing the starting cost and the previous two-state cost.
+2. For each stair, calculate the one-step and possible two-step jump costs.
+3. Store the minimum in `curr`.
+4. Shift `prev1` and `prev2` forward for the next iteration.
+5. Return `prev1` after processing the last stair.
+
+- **Time Complexity:** O(n).
+- **Space Complexity:** O(1).
+
 ### Bottom-Up Dynamic Programming (Tabulation)
 
 The minimum cost to reach stair `i` is the smaller of:
