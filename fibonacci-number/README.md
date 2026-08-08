@@ -22,16 +22,17 @@ Given `n`, calculate `F(n)`.
 
 ## Explanation
 
-### Iterative Bottom-Up
+### Top-Down Dynamic Programming
 
-Instead of using recursion, this solution builds the Fibonacci sequence iteratively with two variables.
+The brute-force recursive solution recalculates the same Fibonacci values many times. This solution keeps the recursive structure, but stores every computed value in a `dp` array so each state is solved once.
 
-1. Initialize `a = 0` and `b = 1`, representing `F(0)` and `F(1)`.
-2. Handle base cases: return `a` when `n == 0`, return `b` when `n == 1`.
-3. Loop from `i = 2` to `n`:
-   - Compute `sum = a + b`.
-   - Shift the window forward: `a = b`, then `b = sum`.
-4. After the loop, `sum` holds `F(n)`.
+1. Create a `dp` array of size `n + 1` and fill it with `-1`.
+2. Use recursion to compute `F(n)`.
+3. Return `n` directly for the base cases `n == 0` and `n == 1`.
+4. Before solving a state, check whether `dp[n]` already has an answer.
+5. Store `solve(n - 2, dp) + solve(n - 1, dp)` in `dp[n]` and return it.
 
-- **Time Complexity:** O(n), one iteration per index from 2 to n.
-- **Space Complexity:** O(1), only a constant number of variables are used.
+The file also keeps the brute-force recursion and iterative bottom-up approach as commented alternatives.
+
+- **Time Complexity:** O(n), each Fibonacci state from `0` to `n` is computed once.
+- **Space Complexity:** O(n), for the memoization array and recursion stack.
