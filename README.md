@@ -108,6 +108,7 @@ Here is a summary of the problems I've solved so far:
 | 743. Network Delay Time                                    | [Solution](./network-delay-time)                                   | Medium     |
 | 1976. Number of Ways to Arrive at Destination              | [Solution](./number-of-ways-to-arrive-at-destination)              | Medium     |
 | Minimum Steps to Reach End                                 | [Solution](./minimum-steps-to-reach-end)                           | Medium     |
+| Frog Jump                                                  | [Solution](./frog-jump)                                            | Medium     |
 | Bellman-Ford Algorithm                                     | [Solution](./bellman-ford-algorithm)                               | Medium     |
 | Floyd-Warshall Algorithm                                   | [Solution](./floyd-warshall-algorithm)                             | Medium     |
 | 1334. Find the City With the Smallest Number of Neighbors at a Threshold Distance | [Solution](./find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance) | Medium |
