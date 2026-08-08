@@ -23,6 +23,22 @@ Return the **minimum total cost** required for the frog to reach the last stair.
 
 ## Explanation
 
+### Bottom-Up Dynamic Programming (Tabulation)
+
+The minimum cost to reach stair `i` is the smaller of:
+
+- The cost to reach stair `i - 1` plus the cost of jumping one stair.
+- The cost to reach stair `i - 2` plus the cost of jumping two stairs.
+
+1. Create a `dp` array where `dp[i]` stores the minimum cost to reach stair `i`.
+2. Set `dp[0] = 0`, since the frog starts at the first stair.
+3. Iterate from stair `1` to stair `n - 1`.
+4. Calculate the one-step and, when possible, two-step jump costs.
+5. Store the smaller cost in `dp[i]` and return `dp[n - 1]`.
+
+- **Time Complexity:** O(n), because each stair is processed once.
+- **Space Complexity:** O(n), for the dynamic programming array.
+
 ### Top-Down Dynamic Programming (Memoization)
 
 To reach stair `n`, the frog must arrive from either stair `n - 1` (one-step jump) or stair `n - 2` (two-step jump). The minimum cost follows a recurrence similar to climbing stairs, but each transition adds the height-difference cost.

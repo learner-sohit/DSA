@@ -1,8 +1,32 @@
 import java.util.Arrays;
 
-// ===== Approach: Top-Down Dynamic Programming (Memoization) =====
+// ===== Approach: Bottom-Up Dynamic Programming (Tabulation) =====
 // Time Complexity: O(n) | Space Complexity: O(n)
 class Solution {
+    public int minCost(int[] height) {
+        int n = height.length;
+        int[] dp = new int[n + 1];
+        Arrays.fill(dp, -1);
+        dp[0] = 0;
+
+        for (int i = 1; i < n; i++) {
+            int firstStep = dp[i - 1] + Math.abs(height[i] - height[i - 1]);
+
+            int secondStep = Integer.MAX_VALUE;
+            if (i > 1) {
+                secondStep = dp[i - 2] + Math.abs(height[i] - height[i - 2]);
+            }
+
+            dp[i] = Math.min(firstStep, secondStep);
+        }
+
+        return dp[n - 1];
+    }
+}
+
+// ===== Approach: Top-Down Dynamic Programming (Memoization) =====
+// Time Complexity: O(n) | Space Complexity: O(n)
+class SolutionMemoization {
     public int minCost(int[] height) {
         int n = height.length;
         int[] dp = new int[n + 1];
