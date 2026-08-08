@@ -32,7 +32,23 @@ The brute-force recursive solution recalculates the same Fibonacci values many t
 4. Before solving a state, check whether `dp[n]` already has an answer.
 5. Store `solve(n - 2, dp) + solve(n - 1, dp)` in `dp[n]` and return it.
 
-The file also keeps the brute-force recursion and iterative bottom-up approach as commented alternatives.
-
 - **Time Complexity:** O(n), each Fibonacci state from `0` to `n` is computed once.
 - **Space Complexity:** O(n), for the memoization array and recursion stack.
+
+### Iterative Bottom-Up
+
+This approach avoids recursion and builds the answer from the base Fibonacci values.
+
+1. Return `n` directly when `n <= 1`.
+2. Keep two variables:
+   - `prev2` for `F(i - 2)`.
+   - `prev1` for `F(i - 1)`.
+3. Loop from `2` to `n`.
+4. Compute `curr = prev1 + prev2`.
+5. Move both previous values forward.
+6. Return `prev1`, which stores `F(n)` after the loop.
+
+- **Time Complexity:** O(n), one loop runs from `2` to `n`.
+- **Space Complexity:** O(1), only a few variables are used.
+
+The file keeps top-down memoization as the active submitted solution and the iterative bottom-up approach as a commented alternative.
